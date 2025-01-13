@@ -15,14 +15,16 @@ class NetflixViewController: UIViewController {
     let logoImageView = UIImageView()
     
     let stackView = UIStackView()
-    
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
     let nicknameTextField = UITextField()
     let placeTextField = UITextField()
     let recommendCodeTextField = UITextField()
+    
     let registerBtn = UIButton()
+    
     let moreInfoLabel = UILabel()
+    
     let toggleBtn = UISwitch()
     
     lazy var textFieldArr = [emailTextField, passwordTextField, nicknameTextField, placeTextField, recommendCodeTextField]
@@ -32,7 +34,7 @@ class NetflixViewController: UIViewController {
 
         setHierarchy()
         setLayout()
-        setUI()
+        setStyle()
     }
     
     func setHierarchy() {
@@ -45,8 +47,6 @@ class NetflixViewController: UIViewController {
         textFieldArr.forEach {
             stackView.addArrangedSubview($0)
         }
-        
-        
     }
     
     func setLayout() {
@@ -82,11 +82,9 @@ class NetflixViewController: UIViewController {
             $0.leading.equalTo(registerBtn.snp.leading)
             $0.width.equalTo(100)
         }
-        
-        
     }
     
-    func setUI() {
+    func setStyle() {
         view.backgroundColor = .black
         
         navigationController?.navigationBar.isHidden = true
