@@ -106,10 +106,6 @@ extension MovieListViewController: UITableViewDelegate {
         }
     }
     
-//    func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
-//        <#code#>
-//    }
-    
 }
 
 extension MovieListViewController: UITableViewDataSource {

@@ -75,20 +75,4 @@ class MovieTableViewCell: UITableViewCell {
         dateLabel.setLabelUI(date, font: .systemFont(ofSize: 14, weight: .light), textColor: .white, alignment: .right)
     }
     
-//    func selectedCellUI() {
-//        let isSelected = (dateLabel.textColor != .white) ? true : false
-//        
-//        if isSelected {
-//            rankView.backgroundColor = .black
-//            rankLabel.textColor = .white
-//            movieNameLabel.textColor = .black
-//            dateLabel.textColor = .black
-//        } else {
-//            rankView.backgroundColor = .white
-//            rankLabel.textColor = .black
-//            movieNameLabel.textColor = .white
-//            dateLabel.textColor = .white
-//        }
-//    }
-    
 }
