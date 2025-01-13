@@ -95,6 +95,7 @@
 		9EBB08D72D34FE19002C52D6 /* DailyTask250113ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */; };
 		9EBB08D92D34FFA9002C52D6 /* NetflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */; };
 		9EBB08DC2D35044A002C52D6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9EBB08DB2D35044A002C52D6 /* Then */; };
+		9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -185,6 +186,7 @@
 		9EBB08D42D34FDF6002C52D6 /* DailyTask250113.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyTask250113.storyboard; sourceTree = "<group>"; };
 		9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTask250113ViewController.swift; sourceTree = "<group>"; };
 		9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixViewController.swift; sourceTree = "<group>"; };
+		9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverPayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +516,7 @@
 				9EBB08D42D34FDF6002C52D6 /* DailyTask250113.storyboard */,
 				9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */,
 				9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */,
+				9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */,
 			);
 			path = DailyTask250113;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				9EBB08912D34F431002C52D6 /* TravelTableViewCell.swift in Sources */,
 				9EBB08922D34F431002C52D6 /* TravelTableViewController.swift in Sources */,
 				9EBB08932D34F431002C52D6 /* CityModel.swift in Sources */,
+				9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */,
 				9EBB08942D34F431002C52D6 /* CityTableViewCell.swift in Sources */,
 				9EBB08952D34F431002C52D6 /* CityTableViewController.swift in Sources */,
 				9EBB08962D34F431002C52D6 /* JustClapViewController.swift in Sources */,
