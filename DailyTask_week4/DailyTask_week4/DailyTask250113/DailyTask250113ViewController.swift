@@ -32,6 +32,8 @@ class DailyTask250113ViewController: UIViewController {
     @IBAction
     func movieListBtnTapped(_ sender: UIButton) {
         print(#function)
+        let vc = MovieListViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
