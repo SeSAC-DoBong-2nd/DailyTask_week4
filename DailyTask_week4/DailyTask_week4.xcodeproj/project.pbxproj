@@ -97,6 +97,7 @@
 		9EBB08DC2D35044A002C52D6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9EBB08DB2D35044A002C52D6 /* Then */; };
 		9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */; };
 		9EBB08E02D351D55002C52D6 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */; };
+		9EBB08E22D351DFE002C52D6 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08E12D351DFE002C52D6 /* MovieList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,6 +190,7 @@
 		9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixViewController.swift; sourceTree = "<group>"; };
 		9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverPayViewController.swift; sourceTree = "<group>"; };
 		9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		9EBB08E12D351DFE002C52D6 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -520,6 +522,7 @@
 				9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */,
 				9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */,
 				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
+				9EBB08E12D351DFE002C52D6 /* MovieList.swift */,
 			);
 			path = DailyTask250113;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				9EBB08962D34F431002C52D6 /* JustClapViewController.swift in Sources */,
 				9EBB08D72D34FE19002C52D6 /* DailyTask250113ViewController.swift in Sources */,
 				9EBB08972D34F431002C52D6 /* Restaurant.swift in Sources */,
+				9EBB08E22D351DFE002C52D6 /* MovieList.swift in Sources */,
 				9EBB08982D34F431002C52D6 /* RestaurantViewController.swift in Sources */,
 				9EBB08992D34F431002C52D6 /* GameCollectionViewCell.swift in Sources */,
 				9EBB08D92D34FFA9002C52D6 /* NetflixViewController.swift in Sources */,
