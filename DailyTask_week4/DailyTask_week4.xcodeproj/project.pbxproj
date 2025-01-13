@@ -96,6 +96,7 @@
 		9EBB08D92D34FFA9002C52D6 /* NetflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */; };
 		9EBB08DC2D35044A002C52D6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9EBB08DB2D35044A002C52D6 /* Then */; };
 		9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */; };
+		9EBB08E02D351D55002C52D6 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,6 +188,7 @@
 		9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTask250113ViewController.swift; sourceTree = "<group>"; };
 		9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixViewController.swift; sourceTree = "<group>"; };
 		9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverPayViewController.swift; sourceTree = "<group>"; };
+		9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -517,6 +519,7 @@
 				9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */,
 				9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */,
 				9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */,
+				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
 			);
 			path = DailyTask250113;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				9EBB08A72D34F431002C52D6 /* UITextField+Extension.swift in Sources */,
 				9EBB08A82D34F431002C52D6 /* UIView+Extension.swift in Sources */,
 				9EBB08A92D34F431002C52D6 /* BMICalculatorViewController.swift in Sources */,
+				9EBB08E02D351D55002C52D6 /* MovieListViewController.swift in Sources */,
 				9EBB08AA2D34F431002C52D6 /* EmotionDiaryViewController.swift in Sources */,
 				9EBB08AB2D34F431002C52D6 /* MainHomeTabViewController.swift in Sources */,
 				9EBB08AC2D34F431002C52D6 /* MainNewHotTabViewController.swift in Sources */,
