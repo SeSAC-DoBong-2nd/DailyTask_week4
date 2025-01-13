@@ -98,6 +98,7 @@
 		9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */; };
 		9EBB08E02D351D55002C52D6 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */; };
 		9EBB08E22D351DFE002C52D6 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08E12D351DFE002C52D6 /* MovieList.swift */; };
+		9EBB08E42D351EDF002C52D6 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08E32D351EDF002C52D6 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +192,7 @@
 		9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverPayViewController.swift; sourceTree = "<group>"; };
 		9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		9EBB08E12D351DFE002C52D6 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		9EBB08E32D351EDF002C52D6 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,6 +524,7 @@
 				9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */,
 				9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */,
 				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
+				9EBB08E32D351EDF002C52D6 /* MovieTableViewCell.swift */,
 				9EBB08E12D351DFE002C52D6 /* MovieList.swift */,
 			);
 			path = DailyTask250113;
@@ -639,6 +642,7 @@
 				9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */,
 				9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */,
 				9EBB087D2D34F431002C52D6 /* AutoLayoutNaverViewController.swift in Sources */,
+				9EBB08E42D351EDF002C52D6 /* MovieTableViewCell.swift in Sources */,
 				9EBB087E2D34F431002C52D6 /* AutoLayoutNetfilxViewController.swift in Sources */,
 				9EBB087F2D34F431002C52D6 /* NicknameSettingViewController.swift in Sources */,
 				9EBB08802D34F431002C52D6 /* TamagotchiUtil.swift in Sources */,
