@@ -25,6 +25,8 @@ class DailyTask250113ViewController: UIViewController {
     @IBAction
     func naverPayBtnTapped(_ sender: UIButton) {
         print(#function)
+        let vc = NaverPayViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction
