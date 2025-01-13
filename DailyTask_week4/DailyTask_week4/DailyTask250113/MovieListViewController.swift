@@ -73,8 +73,6 @@ class MovieListViewController: UIViewController {
     func setStyle() {
         view.backgroundColor = ._250113NaverpayViewBackgorund
         
-        navigationController?.navigationBar.isHidden = true
-        
         underLineView.backgroundColor = .white
         
         movieTableView.do {

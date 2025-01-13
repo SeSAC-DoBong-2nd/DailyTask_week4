@@ -87,8 +87,6 @@ class NetflixViewController: UIViewController {
     func setStyle() {
         view.backgroundColor = .black
         
-        navigationController?.navigationBar.isHidden = true
-        
         logoImageView.setImageView(image: UIImage(resource: .wordmark), cornerRadius: 0)
         
         stackView.do {

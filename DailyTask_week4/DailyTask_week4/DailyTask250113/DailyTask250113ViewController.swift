@@ -19,21 +19,21 @@ class DailyTask250113ViewController: UIViewController {
     func netflixBtnTapped(_ sender: UIButton) {
         print(#function)
         let vc = NetflixViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true)
     }
     
     @IBAction
     func naverPayBtnTapped(_ sender: UIButton) {
         print(#function)
         let vc = NaverPayViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true)
     }
     
     @IBAction
     func movieListBtnTapped(_ sender: UIButton) {
         print(#function)
         let vc = MovieListViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true)
     }
     
     

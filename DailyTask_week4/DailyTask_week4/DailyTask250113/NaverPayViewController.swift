@@ -138,8 +138,6 @@ class NaverPayViewController: UIViewController {
     func setStyle() {
         view.backgroundColor = ._250113NaverpayViewBackgorund
         
-        navigationController?.navigationBar.isHidden = true
-        
         topContainerView.do {
             $0.backgroundColor = .black
             $0.layer.cornerRadius = 20
