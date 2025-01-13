@@ -91,6 +91,10 @@
 		9EBB08CC2D34F431002C52D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBB08782D34F431002C52D6 /* LaunchScreen.storyboard */; };
 		9EBB08CF2D34F442002C52D6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9EBB08CE2D34F442002C52D6 /* Kingfisher */; };
 		9EBB08D22D34F458002C52D6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9EBB08D12D34F458002C52D6 /* SnapKit */; };
+		9EBB08D52D34FDF6002C52D6 /* DailyTask250113.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBB08D42D34FDF6002C52D6 /* DailyTask250113.storyboard */; };
+		9EBB08D72D34FE19002C52D6 /* DailyTask250113ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */; };
+		9EBB08D92D34FFA9002C52D6 /* NetflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */; };
+		9EBB08DC2D35044A002C52D6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9EBB08DB2D35044A002C52D6 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +182,9 @@
 		9EBB08742D34F431002C52D6 /* UIAlert+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+.swift"; sourceTree = "<group>"; };
 		9EBB08762D34F431002C52D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EBB08772D34F431002C52D6 /* Base 3 */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Base 3"; path = "Base 3.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		9EBB08D42D34FDF6002C52D6 /* DailyTask250113.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyTask250113.storyboard; sourceTree = "<group>"; };
+		9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTask250113ViewController.swift; sourceTree = "<group>"; };
+		9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EBB08CF2D34F442002C52D6 /* Kingfisher in Frameworks */,
+				9EBB08DC2D35044A002C52D6 /* Then in Frameworks */,
 				9EBB08D22D34F458002C52D6 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,12 +499,23 @@
 				9EBB08412D34F431002C52D6 /* DailyTask250108 */,
 				9EBB08472D34F431002C52D6 /* DailyTask250109 */,
 				9EBB08592D34F431002C52D6 /* DailyTask250110 */,
+				9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */,
 				9EBB085F2D34F431002C52D6 /* Extension */,
 				9EBB08752D34F431002C52D6 /* Util */,
 				9EBB08762D34F431002C52D6 /* Assets.xcassets */,
 				9EBB08782D34F431002C52D6 /* LaunchScreen.storyboard */,
 			);
 			path = DailyTask_week4;
+			sourceTree = "<group>";
+		};
+		9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */ = {
+			isa = PBXGroup;
+			children = (
+				9EBB08D42D34FDF6002C52D6 /* DailyTask250113.storyboard */,
+				9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */,
+				9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */,
+			);
+			path = DailyTask250113;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,6 +537,7 @@
 			packageProductDependencies = (
 				9EBB08CE2D34F442002C52D6 /* Kingfisher */,
 				9EBB08D12D34F458002C52D6 /* SnapKit */,
+				9EBB08DB2D35044A002C52D6 /* Then */,
 			);
 			productName = DailyTask_week4;
 			productReference = 9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */;
@@ -552,6 +572,7 @@
 			packageReferences = (
 				9EBB08CD2D34F442002C52D6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				9EBB08D02D34F458002C52D6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9EBB08DA2D35044A002C52D6 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9EBB072E2D34F3A6002C52D6 /* Products */;
@@ -588,6 +609,7 @@
 				9EBB08C42D34F431002C52D6 /* TravelTalkCollectionViewCell.xib in Resources */,
 				9EBB08C52D34F431002C52D6 /* Chatting.storyboard in Resources */,
 				9EBB08C62D34F431002C52D6 /* BMICalculator.storyboard in Resources */,
+				9EBB08D52D34FDF6002C52D6 /* DailyTask250113.storyboard in Resources */,
 				9EBB08C72D34F431002C52D6 /* EmotionDiary.storyboard in Resources */,
 				9EBB08C82D34F431002C52D6 /* Main.storyboard in Resources */,
 				9EBB08C92D34F431002C52D6 /* NeologismFinder.storyboard in Resources */,
@@ -633,9 +655,11 @@
 				9EBB08942D34F431002C52D6 /* CityTableViewCell.swift in Sources */,
 				9EBB08952D34F431002C52D6 /* CityTableViewController.swift in Sources */,
 				9EBB08962D34F431002C52D6 /* JustClapViewController.swift in Sources */,
+				9EBB08D72D34FE19002C52D6 /* DailyTask250113ViewController.swift in Sources */,
 				9EBB08972D34F431002C52D6 /* Restaurant.swift in Sources */,
 				9EBB08982D34F431002C52D6 /* RestaurantViewController.swift in Sources */,
 				9EBB08992D34F431002C52D6 /* GameCollectionViewCell.swift in Sources */,
+				9EBB08D92D34FFA9002C52D6 /* NetflixViewController.swift in Sources */,
 				9EBB089A2D34F431002C52D6 /* GameWaitingViewController.swift in Sources */,
 				9EBB089B2D34F431002C52D6 /* UpDownGameViewController.swift in Sources */,
 				9EBB089C2D34F431002C52D6 /* ChatViewController.swift in Sources */,
@@ -900,6 +924,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		9EBB08DA2D35044A002C52D6 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -912,6 +944,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9EBB08D02D34F458002C52D6 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		9EBB08DB2D35044A002C52D6 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EBB08DA2D35044A002C52D6 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
