@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E7882FC2D36B80B00A3697D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7882FB2D36B80B00A3697D /* BaseViewController.swift */; };
+		9E7883002D36B94B00A3697D /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */; };
+		9E7883032D36CE8200A3697D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7883022D36CE8200A3697D /* Alamofire */; };
+		9E7883062D36CFDD00A3697D /* LotteryResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */; };
+		9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883082D36E3C400A3697D /* MovieResponseModel.swift */; };
+		9E78830B2D36F15600A3697D /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9E78830A2D36F15600A3697D /* Secret.xcconfig */; };
+		9E78830D2D36F20200A3697D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -102,6 +109,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E7882FB2D36B80B00A3697D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
+		9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryResponseModel.swift; sourceTree = "<group>"; };
+		9E7883082D36E3C400A3697D /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
+		9E78830A2D36F15600A3697D /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
+		9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EBB08CF2D34F442002C52D6 /* Kingfisher in Frameworks */,
+				9E7883032D36CE8200A3697D /* Alamofire in Frameworks */,
 				9EBB08DC2D35044A002C52D6 /* Then in Frameworks */,
 				9EBB08D22D34F458002C52D6 /* SnapKit in Frameworks */,
 			);
@@ -209,6 +223,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E7882FA2D36B7F400A3697D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9E7882FB2D36B80B00A3697D /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9E7882FD2D36B8DF00A3697D /* DailyTask250114 */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883042D36CF8D00A3697D /* LotteryModel */,
+				9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */,
+			);
+			path = DailyTask250114;
+			sourceTree = "<group>";
+		};
+		9E7882FE2D36B8FA00A3697D /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883072D36E3B800A3697D /* MovieModel */,
+				9EBB08E12D351DFE002C52D6 /* MovieList.swift */,
+				9EBB08E32D351EDF002C52D6 /* MovieTableViewCell.swift */,
+				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		9E7883042D36CF8D00A3697D /* LotteryModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */,
+			);
+			path = LotteryModel;
+			sourceTree = "<group>";
+		};
+		9E7883072D36E3B800A3697D /* MovieModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883082D36E3C400A3697D /* MovieResponseModel.swift */,
+			);
+			path = MovieModel;
+			sourceTree = "<group>";
+		};
 		9EBB07242D34F3A6002C52D6 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +289,7 @@
 				9EBB080B2D34F431002C52D6 /* AppDelegate.swift */,
 				9EBB080C2D34F431002C52D6 /* Info.plist */,
 				9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */,
+				9E78830A2D36F15600A3697D /* Secret.xcconfig */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -417,6 +476,7 @@
 		9EBB085F2D34F431002C52D6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */,
 				9EBB085A2D34F431002C52D6 /* UIButton+Extension.swift */,
 				9EBB085B2D34F431002C52D6 /* UIImageView+Extension.swift */,
 				9EBB085C2D34F431002C52D6 /* UILabel+Extension.swift */,
@@ -507,7 +567,9 @@
 				9EBB08412D34F431002C52D6 /* DailyTask250108 */,
 				9EBB08472D34F431002C52D6 /* DailyTask250109 */,
 				9EBB08592D34F431002C52D6 /* DailyTask250110 */,
-				9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */,
+				9EBB08D32D34F6C9002C52D6 /* DailyTask250113,250114 */,
+				9E7882FD2D36B8DF00A3697D /* DailyTask250114 */,
+				9E7882FA2D36B7F400A3697D /* Base */,
 				9EBB085F2D34F431002C52D6 /* Extension */,
 				9EBB08752D34F431002C52D6 /* Util */,
 				9EBB08762D34F431002C52D6 /* Assets.xcassets */,
@@ -516,18 +578,16 @@
 			path = DailyTask_week4;
 			sourceTree = "<group>";
 		};
-		9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */ = {
+		9EBB08D32D34F6C9002C52D6 /* DailyTask250113,250114 */ = {
 			isa = PBXGroup;
 			children = (
+				9E7882FE2D36B8FA00A3697D /* Movie */,
 				9EBB08D42D34FDF6002C52D6 /* DailyTask250113.storyboard */,
 				9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */,
 				9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */,
 				9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */,
-				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
-				9EBB08E32D351EDF002C52D6 /* MovieTableViewCell.swift */,
-				9EBB08E12D351DFE002C52D6 /* MovieList.swift */,
 			);
-			path = DailyTask250113;
+			path = "DailyTask250113,250114";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,6 +610,7 @@
 				9EBB08CE2D34F442002C52D6 /* Kingfisher */,
 				9EBB08D12D34F458002C52D6 /* SnapKit */,
 				9EBB08DB2D35044A002C52D6 /* Then */,
+				9E7883022D36CE8200A3697D /* Alamofire */,
 			);
 			productName = DailyTask_week4;
 			productReference = 9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */;
@@ -585,6 +646,7 @@
 				9EBB08CD2D34F442002C52D6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				9EBB08D02D34F458002C52D6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9EBB08DA2D35044A002C52D6 /* XCRemoteSwiftPackageReference "Then" */,
+				9E7883012D36CE8200A3697D /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9EBB072E2D34F3A6002C52D6 /* Products */;
@@ -613,6 +675,7 @@
 				9EBB08BC2D34F431002C52D6 /* JustClap.storyboard in Resources */,
 				9EBB08BD2D34F431002C52D6 /* Restaurant.storyboard in Resources */,
 				9EBB08BE2D34F431002C52D6 /* GameCollectionViewCell.xib in Resources */,
+				9E78830B2D36F15600A3697D /* Secret.xcconfig in Resources */,
 				9EBB08BF2D34F431002C52D6 /* UpDownGame.storyboard in Resources */,
 				9EBB08C02D34F431002C52D6 /* DateLineTableViewCell.xib in Resources */,
 				9EBB08C12D34F431002C52D6 /* MyChatTableViewCell.xib in Resources */,
@@ -643,6 +706,7 @@
 				9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */,
 				9EBB087D2D34F431002C52D6 /* AutoLayoutNaverViewController.swift in Sources */,
 				9EBB08E42D351EDF002C52D6 /* MovieTableViewCell.swift in Sources */,
+				9E7882FC2D36B80B00A3697D /* BaseViewController.swift in Sources */,
 				9EBB087E2D34F431002C52D6 /* AutoLayoutNetfilxViewController.swift in Sources */,
 				9EBB087F2D34F431002C52D6 /* NicknameSettingViewController.swift in Sources */,
 				9EBB08802D34F431002C52D6 /* TamagotchiUtil.swift in Sources */,
@@ -666,6 +730,7 @@
 				9EBB08922D34F431002C52D6 /* TravelTableViewController.swift in Sources */,
 				9EBB08932D34F431002C52D6 /* CityModel.swift in Sources */,
 				9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */,
+				9E78830D2D36F20200A3697D /* Bundle+Extension.swift in Sources */,
 				9EBB08942D34F431002C52D6 /* CityTableViewCell.swift in Sources */,
 				9EBB08952D34F431002C52D6 /* CityTableViewController.swift in Sources */,
 				9EBB08962D34F431002C52D6 /* JustClapViewController.swift in Sources */,
@@ -677,6 +742,7 @@
 				9EBB08D92D34FFA9002C52D6 /* NetflixViewController.swift in Sources */,
 				9EBB089A2D34F431002C52D6 /* GameWaitingViewController.swift in Sources */,
 				9EBB089B2D34F431002C52D6 /* UpDownGameViewController.swift in Sources */,
+				9E7883002D36B94B00A3697D /* LotteryViewController.swift in Sources */,
 				9EBB089C2D34F431002C52D6 /* ChatViewController.swift in Sources */,
 				9EBB089D2D34F431002C52D6 /* DateLineTableViewCell.swift in Sources */,
 				9EBB089E2D34F431002C52D6 /* MyChatTableViewCell.swift in Sources */,
@@ -693,8 +759,10 @@
 				9EBB08A92D34F431002C52D6 /* BMICalculatorViewController.swift in Sources */,
 				9EBB08E02D351D55002C52D6 /* MovieListViewController.swift in Sources */,
 				9EBB08AA2D34F431002C52D6 /* EmotionDiaryViewController.swift in Sources */,
+				9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */,
 				9EBB08AB2D34F431002C52D6 /* MainHomeTabViewController.swift in Sources */,
 				9EBB08AC2D34F431002C52D6 /* MainNewHotTabViewController.swift in Sources */,
+				9E7883062D36CFDD00A3697D /* LotteryResponseModel.swift in Sources */,
 				9EBB08AD2D34F431002C52D6 /* MainSaveContentsListViewController.swift in Sources */,
 				9EBB08AE2D34F431002C52D6 /* NeologismFinderViewController.swift in Sources */,
 				9EBB08AF2D34F431002C52D6 /* DailyTask2ndViewController.swift in Sources */,
@@ -727,6 +795,7 @@
 /* Begin XCBuildConfiguration section */
 		9EBB07412D34F3A8002C52D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E78830A2D36F15600A3697D /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -755,6 +824,7 @@
 		};
 		9EBB07422D34F3A8002C52D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E78830A2D36F15600A3697D /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -924,6 +994,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9E7883012D36CE8200A3697D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 		9EBB08CD2D34F442002C52D6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -951,6 +1029,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9E7883022D36CE8200A3697D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E7883012D36CE8200A3697D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		9EBB08CE2D34F442002C52D6 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9EBB08CD2D34F442002C52D6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
