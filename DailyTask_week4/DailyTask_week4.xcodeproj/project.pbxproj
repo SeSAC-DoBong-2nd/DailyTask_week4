@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E7882FC2D36B80B00A3697D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7882FB2D36B80B00A3697D /* BaseViewController.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -102,6 +103,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E7882FB2D36B80B00A3697D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -209,6 +211,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E7882FA2D36B7F400A3697D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9E7882FB2D36B80B00A3697D /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		9EBB07242D34F3A6002C52D6 = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +518,7 @@
 				9EBB08472D34F431002C52D6 /* DailyTask250109 */,
 				9EBB08592D34F431002C52D6 /* DailyTask250110 */,
 				9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */,
+				9E7882FA2D36B7F400A3697D /* Base */,
 				9EBB085F2D34F431002C52D6 /* Extension */,
 				9EBB08752D34F431002C52D6 /* Util */,
 				9EBB08762D34F431002C52D6 /* Assets.xcassets */,
@@ -643,6 +654,7 @@
 				9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */,
 				9EBB087D2D34F431002C52D6 /* AutoLayoutNaverViewController.swift in Sources */,
 				9EBB08E42D351EDF002C52D6 /* MovieTableViewCell.swift in Sources */,
+				9E7882FC2D36B80B00A3697D /* BaseViewController.swift in Sources */,
 				9EBB087E2D34F431002C52D6 /* AutoLayoutNetfilxViewController.swift in Sources */,
 				9EBB087F2D34F431002C52D6 /* NicknameSettingViewController.swift in Sources */,
 				9EBB08802D34F431002C52D6 /* TamagotchiUtil.swift in Sources */,
