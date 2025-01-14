@@ -219,6 +219,23 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		9E7882FD2D36B8DF00A3697D /* DailyTask250114 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DailyTask250114;
+			sourceTree = "<group>";
+		};
+		9E7882FE2D36B8FA00A3697D /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				9EBB08E12D351DFE002C52D6 /* MovieList.swift */,
+				9EBB08E32D351EDF002C52D6 /* MovieTableViewCell.swift */,
+				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
 		9EBB07242D34F3A6002C52D6 = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +535,7 @@
 				9EBB08472D34F431002C52D6 /* DailyTask250109 */,
 				9EBB08592D34F431002C52D6 /* DailyTask250110 */,
 				9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */,
+				9E7882FD2D36B8DF00A3697D /* DailyTask250114 */,
 				9E7882FA2D36B7F400A3697D /* Base */,
 				9EBB085F2D34F431002C52D6 /* Extension */,
 				9EBB08752D34F431002C52D6 /* Util */,
@@ -530,13 +548,11 @@
 		9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */ = {
 			isa = PBXGroup;
 			children = (
+				9E7882FE2D36B8FA00A3697D /* Movie */,
 				9EBB08D42D34FDF6002C52D6 /* DailyTask250113.storyboard */,
 				9EBB08D62D34FE19002C52D6 /* DailyTask250113ViewController.swift */,
 				9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */,
 				9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */,
-				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
-				9EBB08E32D351EDF002C52D6 /* MovieTableViewCell.swift */,
-				9EBB08E12D351DFE002C52D6 /* MovieList.swift */,
 			);
 			path = DailyTask250113;
 			sourceTree = "<group>";
