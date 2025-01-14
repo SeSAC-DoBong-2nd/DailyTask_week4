@@ -24,8 +24,6 @@ class BaseViewController: UIViewController {
     
     func setLayout() {}
     
-    func setStyle() {
-        self.view.backgroundColor = .white
-    }
+    func setStyle() {}
     
 }
