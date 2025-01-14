@@ -226,6 +226,7 @@
 		9E7882FD2D36B8DF00A3697D /* DailyTask250114 */ = {
 			isa = PBXGroup;
 			children = (
+				9E7883042D36CF8D00A3697D /* LotteryModel */,
 				9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */,
 			);
 			path = DailyTask250114;
@@ -239,6 +240,13 @@
 				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		9E7883042D36CF8D00A3697D /* LotteryModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LotteryModel;
 			sourceTree = "<group>";
 		};
 		9EBB07242D34F3A6002C52D6 = {
@@ -539,7 +547,7 @@
 				9EBB08412D34F431002C52D6 /* DailyTask250108 */,
 				9EBB08472D34F431002C52D6 /* DailyTask250109 */,
 				9EBB08592D34F431002C52D6 /* DailyTask250110 */,
-				9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */,
+				9EBB08D32D34F6C9002C52D6 /* DailyTask250113,250114 */,
 				9E7882FD2D36B8DF00A3697D /* DailyTask250114 */,
 				9E7882FA2D36B7F400A3697D /* Base */,
 				9EBB085F2D34F431002C52D6 /* Extension */,
@@ -550,7 +558,7 @@
 			path = DailyTask_week4;
 			sourceTree = "<group>";
 		};
-		9EBB08D32D34F6C9002C52D6 /* DailyTask250113 */ = {
+		9EBB08D32D34F6C9002C52D6 /* DailyTask250113,250114 */ = {
 			isa = PBXGroup;
 			children = (
 				9E7882FE2D36B8FA00A3697D /* Movie */,
@@ -559,7 +567,7 @@
 				9EBB08D82D34FFA9002C52D6 /* NetflixViewController.swift */,
 				9EBB08DD2D350C01002C52D6 /* NaverPayViewController.swift */,
 			);
-			path = DailyTask250113;
+			path = "DailyTask250113,250114";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
