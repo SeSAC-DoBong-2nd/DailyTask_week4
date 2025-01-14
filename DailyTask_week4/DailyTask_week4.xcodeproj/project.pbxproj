@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E7882FC2D36B80B00A3697D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7882FB2D36B80B00A3697D /* BaseViewController.swift */; };
+		9E7883002D36B94B00A3697D /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		9E7882FB2D36B80B00A3697D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		9E7882FD2D36B8DF00A3697D /* DailyTask250114 */ = {
 			isa = PBXGroup;
 			children = (
+				9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */,
 			);
 			path = DailyTask250114;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				9EBB08D92D34FFA9002C52D6 /* NetflixViewController.swift in Sources */,
 				9EBB089A2D34F431002C52D6 /* GameWaitingViewController.swift in Sources */,
 				9EBB089B2D34F431002C52D6 /* UpDownGameViewController.swift in Sources */,
+				9E7883002D36B94B00A3697D /* LotteryViewController.swift in Sources */,
 				9EBB089C2D34F431002C52D6 /* ChatViewController.swift in Sources */,
 				9EBB089D2D34F431002C52D6 /* DateLineTableViewCell.swift in Sources */,
 				9EBB089E2D34F431002C52D6 /* MyChatTableViewCell.swift in Sources */,
