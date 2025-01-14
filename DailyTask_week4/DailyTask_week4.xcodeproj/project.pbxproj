@@ -11,6 +11,7 @@
 		9E7883002D36B94B00A3697D /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */; };
 		9E7883032D36CE8200A3697D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7883022D36CE8200A3697D /* Alamofire */; };
 		9E7883062D36CFDD00A3697D /* LotteryResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */; };
+		9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883082D36E3C400A3697D /* MovieResponseModel.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -109,6 +110,7 @@
 		9E7882FB2D36B80B00A3697D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 		9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryResponseModel.swift; sourceTree = "<group>"; };
+		9E7883082D36E3C400A3697D /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		9E7882FE2D36B8FA00A3697D /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				9E7883072D36E3B800A3697D /* MovieModel */,
 				9EBB08E12D351DFE002C52D6 /* MovieList.swift */,
 				9EBB08E32D351EDF002C52D6 /* MovieTableViewCell.swift */,
 				9EBB08DF2D351D55002C52D6 /* MovieListViewController.swift */,
@@ -250,6 +253,14 @@
 				9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */,
 			);
 			path = LotteryModel;
+			sourceTree = "<group>";
+		};
+		9E7883072D36E3B800A3697D /* MovieModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883082D36E3C400A3697D /* MovieResponseModel.swift */,
+			);
+			path = MovieModel;
 			sourceTree = "<group>";
 		};
 		9EBB07242D34F3A6002C52D6 = {
@@ -740,6 +751,7 @@
 				9EBB08A92D34F431002C52D6 /* BMICalculatorViewController.swift in Sources */,
 				9EBB08E02D351D55002C52D6 /* MovieListViewController.swift in Sources */,
 				9EBB08AA2D34F431002C52D6 /* EmotionDiaryViewController.swift in Sources */,
+				9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */,
 				9EBB08AB2D34F431002C52D6 /* MainHomeTabViewController.swift in Sources */,
 				9EBB08AC2D34F431002C52D6 /* MainNewHotTabViewController.swift in Sources */,
 				9E7883062D36CFDD00A3697D /* LotteryResponseModel.swift in Sources */,
