@@ -28,8 +28,6 @@ class MovieListViewController: UIViewController {
     let searchBtn = UIButton()
     
     let movieTableView = UITableView()
-    
-    let key = "98a8c769410dc81abd967ed65b1dc2f5"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,7 +123,12 @@ private extension MovieListViewController {
     }
     
     func getMovieList(date: String) {
-        let url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(key)&targetDt=\(date)"
+        guard let apiKey = Bundle.main.apiKey else {
+            print("API 키를 로드하지 못했습니다.")
+            return
+        }
+        
+        let url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(apiKey)&targetDt=\(date)"
         
         AF.request(url, method: .get).responseDecodable(of: MovieResponseModel.self) { response in
             switch response.result {

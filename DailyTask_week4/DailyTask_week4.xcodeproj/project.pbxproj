@@ -12,6 +12,8 @@
 		9E7883032D36CE8200A3697D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7883022D36CE8200A3697D /* Alamofire */; };
 		9E7883062D36CFDD00A3697D /* LotteryResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */; };
 		9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883082D36E3C400A3697D /* MovieResponseModel.swift */; };
+		9E78830B2D36F15600A3697D /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9E78830A2D36F15600A3697D /* Secret.xcconfig */; };
+		9E78830D2D36F20200A3697D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -111,6 +113,8 @@
 		9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 		9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryResponseModel.swift; sourceTree = "<group>"; };
 		9E7883082D36E3C400A3697D /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
+		9E78830A2D36F15600A3697D /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
+		9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 				9EBB080B2D34F431002C52D6 /* AppDelegate.swift */,
 				9EBB080C2D34F431002C52D6 /* Info.plist */,
 				9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */,
+				9E78830A2D36F15600A3697D /* Secret.xcconfig */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 		9EBB085F2D34F431002C52D6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */,
 				9EBB085A2D34F431002C52D6 /* UIButton+Extension.swift */,
 				9EBB085B2D34F431002C52D6 /* UIImageView+Extension.swift */,
 				9EBB085C2D34F431002C52D6 /* UILabel+Extension.swift */,
@@ -669,6 +675,7 @@
 				9EBB08BC2D34F431002C52D6 /* JustClap.storyboard in Resources */,
 				9EBB08BD2D34F431002C52D6 /* Restaurant.storyboard in Resources */,
 				9EBB08BE2D34F431002C52D6 /* GameCollectionViewCell.xib in Resources */,
+				9E78830B2D36F15600A3697D /* Secret.xcconfig in Resources */,
 				9EBB08BF2D34F431002C52D6 /* UpDownGame.storyboard in Resources */,
 				9EBB08C02D34F431002C52D6 /* DateLineTableViewCell.xib in Resources */,
 				9EBB08C12D34F431002C52D6 /* MyChatTableViewCell.xib in Resources */,
@@ -723,6 +730,7 @@
 				9EBB08922D34F431002C52D6 /* TravelTableViewController.swift in Sources */,
 				9EBB08932D34F431002C52D6 /* CityModel.swift in Sources */,
 				9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */,
+				9E78830D2D36F20200A3697D /* Bundle+Extension.swift in Sources */,
 				9EBB08942D34F431002C52D6 /* CityTableViewCell.swift in Sources */,
 				9EBB08952D34F431002C52D6 /* CityTableViewController.swift in Sources */,
 				9EBB08962D34F431002C52D6 /* JustClapViewController.swift in Sources */,
@@ -787,6 +795,7 @@
 /* Begin XCBuildConfiguration section */
 		9EBB07412D34F3A8002C52D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E78830A2D36F15600A3697D /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -815,6 +824,7 @@
 		};
 		9EBB07422D34F3A8002C52D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E78830A2D36F15600A3697D /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
