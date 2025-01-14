@@ -240,6 +240,8 @@ private extension LotteryViewController {
     ///lottoBall UI 담당 함수
     func lottoBallUI(selectedLottoArr: [Int]) {
         for i in 0..<stackViewList.count {
+            stackViewList[i].subviews.forEach { $0.removeFromSuperview() }
+            
             let numLabel = UILabel()
             let text = (i == 6) ? "+" : String(selectedLottoArr[i])
             let textColor = (i == 6) ? UIColor(.black) : UIColor(.white)
@@ -249,6 +251,7 @@ private extension LotteryViewController {
                                 alignment: .center)
             
             stackViewList[i].addSubview(numLabel)
+            
             numLabel.snp.makeConstraints {
                 $0.center.equalToSuperview()
             }
