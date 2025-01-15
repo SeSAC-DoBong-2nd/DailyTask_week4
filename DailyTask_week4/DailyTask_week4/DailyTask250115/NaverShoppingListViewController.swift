@@ -17,12 +17,14 @@ class NaverShoppingListViewController: BaseViewController {
     let collectionViewInset = 10
     let buttonStrArr = ["  정확도  ", "  날짜순  ", "  가격높은순  ", "  가격낮은순  "]
     lazy var buttonArr = [accuracyButton, byDateButton, priceHigherButton, priceLowestButton]
+    lazy var heartSelectedArr = Array(repeating: false, count: shoppingList.count)
     
     var searchText = "searchText"
     var resultCount = 888
     var shoppingList: [Items] = [] {
         didSet {
             shoppingCollectionView.reloadData()
+            heartSelectedArr = Array(repeating: false, count: shoppingList.count)
         }
     }
     
@@ -220,6 +222,17 @@ private extension NaverShoppingListViewController {
     }
     
     @objc
+    func heartButtonTapped(_ sender: UIButton) {
+        heartSelectedArr[sender.tag].toggle()
+        switch heartSelectedArr[sender.tag] {
+        case true:
+            sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        case false:
+            sender.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+    }
+    
+    @objc
     func navLeftBtnTapped() {
         print(#function)
         navigationController?.popViewController(animated: true)
@@ -245,6 +258,8 @@ extension NaverShoppingListViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShoppingListCollectionViewCell.id, for: indexPath) as? ShoppingListCollectionViewCell else { return UICollectionViewCell() }
         
         let index = shoppingList[indexPath.item]
+        cell.heartButton.tag = indexPath.item
+        cell.heartButton.addTarget(self, action: #selector(heartButtonTapped), for: .touchUpInside)
         
         cell.configureShppingListCell(
             imageUrl: index.image,
@@ -254,7 +269,8 @@ extension NaverShoppingListViewController: UICollectionViewDataSource {
                                       with: "",
                                       options: .regularExpression,
                                       range: nil),
-            price: Int(index.lprice) ?? 0
+            price: Int(index.lprice) ?? 0,
+            isHeartBtnSelected: heartSelectedArr[indexPath.row]
         )
         
         return cell

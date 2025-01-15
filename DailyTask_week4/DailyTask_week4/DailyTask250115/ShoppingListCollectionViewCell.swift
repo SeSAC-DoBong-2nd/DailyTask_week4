@@ -15,6 +15,7 @@ class ShoppingListCollectionViewCell: UICollectionViewCell {
     let mallNameLabel = UILabel()
     let productLabel = UILabel()
     let priceLabel = UILabel()
+    let heartButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,11 +29,17 @@ class ShoppingListCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
+    }
+    
     func setHierarchy() {
         contentView.addSubviews(imageView,
                                 mallNameLabel,
                                 productLabel,
                                 priceLabel)
+        
+        imageView.addSubview(heartButton)
     }
     
     func setLayout() {
@@ -56,12 +63,30 @@ class ShoppingListCollectionViewCell: UICollectionViewCell {
             $0.top.equalTo(productLabel.snp.bottom).offset(4)
             $0.leading.equalTo(mallNameLabel.snp.leading)
         }
+        
+        heartButton.snp.makeConstraints {
+            $0.trailing.bottom.equalToSuperview().inset(15)
+            $0.size.equalTo(40)
+        }
+    }
+    
+    func setStyle() {
+        imageView.isUserInteractionEnabled = true
+        
+        heartButton.do {
+            $0.backgroundColor = .white
+            $0.layer.cornerRadius = 20
+            $0.setImage(UIImage(systemName: "heart"), for: .normal)
+            $0.tintColor = .black
+            $0.contentMode = .scaleAspectFill
+        }
     }
     
     func configureShppingListCell(imageUrl: String,
                                   shoppingMallName: String,
                                   productName: String,
-                                  price: Int)
+                                  price: Int,
+                                  isHeartBtnSelected: Bool)
     {
         imageView.setImageKfDownSampling(with: imageUrl, cornerRadius: 20)
         
@@ -76,6 +101,9 @@ class ShoppingListCollectionViewCell: UICollectionViewCell {
         priceLabel.setLabelUI(CustomFormatter.shard.setDecimalNumber(num: price),
                               font: .systemFont(ofSize: 16, weight: .medium),
                               textColor: .white)
+        isHeartBtnSelected
+        ? heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        : heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
     }
     
 }
