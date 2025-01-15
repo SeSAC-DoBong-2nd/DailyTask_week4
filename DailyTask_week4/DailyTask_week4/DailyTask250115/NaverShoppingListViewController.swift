@@ -7,23 +7,40 @@
 
 import UIKit
 
-class NaverShoppingListViewController: UIViewController {
+class NaverShoppingListViewController: BaseViewController {
+    
+    var searchText = "searchText"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .brown
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func setHierarchy() {}
+    
+    override func setLayout() {}
+    
+    override func setStyle() {
+        navigationController?.navigationBar.tintColor = .white
+        
+        navigationItem.title = searchText
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"),
+                                                           style: .done,
+                                                           target: self,
+                                                           action: #selector(navLeftBtnTapped))
+        
     }
-    */
 
+}
+
+private extension NaverShoppingListViewController {
+    
+    @objc
+    func navLeftBtnTapped() {
+        print(#function)
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
