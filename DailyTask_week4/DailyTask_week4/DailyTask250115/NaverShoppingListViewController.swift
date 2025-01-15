@@ -171,12 +171,22 @@ private extension NaverShoppingListViewController {
         ? ["query": query, "display": 100]
         : ["query": query, "display": 100, "sort": (filter ?? "")]
         
+        guard let clientID = Bundle.main.naverClientId else {
+            print("API 키를 로드하지 못했습니다.")
+            return
+        }
+        
+        guard let clientSecret = Bundle.main.naverClientSecret else {
+            print("API 키를 로드하지 못했습니다.")
+            return
+        }
+        
         AF.request(url,
                    method: .get,
                    parameters: parameters,
                    headers: [
-                    HTTPHeader(name: "X-Naver-Client-Id", value: "ZFh8lFuSTE0h9CfYE75T"),
-                    HTTPHeader(name: "X-Naver-Client-Secret",value: "AcXJVWd0OY")
+                    HTTPHeader(name: "X-Naver-Client-Id", value: clientID),
+                    HTTPHeader(name: "X-Naver-Client-Secret",value: clientSecret)
                    ]).responseDecodable(of: NaverShoppingResponseModel.self)
         { response in
             print(response)
