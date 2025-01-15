@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct NaverShoppingResponseModel {
-    let total: String
+struct NaverShoppingResponseModel: Decodable {
+    let total: Int
     let items: [Items]
 }
 
-struct Items {
+struct Items: Decodable {
     let image: String
     let mallName: String
     let title: String
-    let lprice: Int
+    let lprice: String
 }
 
