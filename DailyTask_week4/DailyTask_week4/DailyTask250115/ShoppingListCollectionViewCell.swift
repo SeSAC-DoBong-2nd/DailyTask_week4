@@ -58,9 +58,6 @@ class ShoppingListCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func setStyle() {
-    }
-    
     func configureShppingListCell(imageUrl: String,
                                   shoppingMallName: String,
                                   productName: String,
