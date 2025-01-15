@@ -12,30 +12,30 @@ import Kingfisher
 import SnapKit
 import Then
 
-class NaverShoppingListViewController: BaseViewController {
+final class NaverShoppingListViewController: BaseViewController {
     
-    let collectionViewInset = 10
-    let buttonStrArr = ["  정확도  ", "  날짜순  ", "  가격높은순  ", "  가격낮은순  "]
-    lazy var buttonArr = [accuracyButton, byDateButton, priceHigherButton, priceLowestButton]
-    lazy var heartSelectedArr = Array(repeating: false, count: shoppingList.count)
+    private let collectionViewInset = 10
+    private let buttonStrArr = ["  정확도  ", "  날짜순  ", "  가격높은순  ", "  가격낮은순  "]
+    private lazy var buttonArr = [accuracyButton, byDateButton, priceHigherButton, priceLowestButton]
+    private lazy var heartSelectedArr = Array(repeating: false, count: shoppingList.count)
     
     var searchText = "searchText"
-    var resultCount = 888
-    var shoppingList: [Items] = [] {
+    private var resultCount = 888
+    private var shoppingList: [Items] = [] {
         didSet {
             shoppingCollectionView.reloadData()
             heartSelectedArr = Array(repeating: false, count: shoppingList.count)
         }
     }
     
-    let resultCntLabel = UILabel()
-    let filterContainerView = UIView()
-    let accuracyButton = UIButton()
-    let byDateButton = UIButton()
-    let priceHigherButton = UIButton()
-    let priceLowestButton = UIButton()
+    private let resultCntLabel = UILabel()
+    private let filterContainerView = UIView()
+    private let accuracyButton = UIButton()
+    private let byDateButton = UIButton()
+    private let priceHigherButton = UIButton()
+    private let priceLowestButton = UIButton()
     
-    lazy var shoppingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private lazy var shoppingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     override func viewWillAppear(_ animated: Bool) {
         getNaverShoppingAPI(query: searchText, filter: nil)
@@ -172,12 +172,12 @@ private extension NaverShoppingListViewController {
         : ["query": query, "display": 100, "sort": (filter ?? "")]
         
         guard let clientID = Bundle.main.naverClientId else {
-            print("API 키를 로드하지 못했습니다.")
+            print("clientID 키를 로드하지 못했습니다.")
             return
         }
         
         guard let clientSecret = Bundle.main.naverClientSecret else {
-            print("API 키를 로드하지 못했습니다.")
+            print("clientSecret 키를 로드하지 못했습니다.")
             return
         }
         

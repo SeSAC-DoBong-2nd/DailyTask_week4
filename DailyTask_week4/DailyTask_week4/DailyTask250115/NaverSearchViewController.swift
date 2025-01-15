@@ -10,11 +10,11 @@ import UIKit
 import SnapKit
 import Then
 
-class NaverSearchViewController: BaseViewController {
+final class NaverSearchViewController: BaseViewController {
     
-    let searchBar = UISearchBar()
-    let emptyView = UIView()
-    let imageView = UIImageView()
+    private let searchBar = UISearchBar()
+    private let emptyView = UIView()
+    private let imageView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
