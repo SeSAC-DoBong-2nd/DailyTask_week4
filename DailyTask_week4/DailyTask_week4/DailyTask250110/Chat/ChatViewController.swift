@@ -163,7 +163,7 @@ private extension ChatViewController {
     func sendButtonTapped() {
         print(#function)
         if currentTextFieldText != "메세지를 입력하세요" && !currentTextFieldText.isEmpty {
-            let date = CustomDateFormatter.shard.setTodayDate()
+            let date = CustomFormatter.shard.setTodayDate()
             
             currentChatList.chatList.append(
                 Chat(user: .user, date: date, message: currentTextFieldText)
@@ -270,7 +270,7 @@ extension ChatViewController: UITableViewDataSource {
             if chat.user == .user {
                 let myChatCell = tableView.dequeueReusableCell(withIdentifier: MyChatTableViewCell.identifier, for: indexPath) as! MyChatTableViewCell
                 myChatCell.setMyChatCellUI(
-                    date: CustomDateFormatter.shard.setDateInChat(strDate: chat.date),
+                    date: CustomFormatter.shard.setDateInChat(strDate: chat.date),
                     message: chat.message
                 )
                 myChatCell.separatorInset = noSeparatorInset
@@ -279,7 +279,7 @@ extension ChatViewController: UITableViewDataSource {
                 let otherChatCell = tableView.dequeueReusableCell(withIdentifier: OtherChatTableViewCell.identifier, for: indexPath) as! OtherChatTableViewCell
                 otherChatCell.setOtherChatCellUI(
                     user: chat.user.rawValue,
-                    date: CustomDateFormatter.shard.setDateInChat(strDate: chat.date),
+                    date: CustomFormatter.shard.setDateInChat(strDate: chat.date),
                     message: chat.message
                 )
                 otherChatCell.separatorInset = noSeparatorInset

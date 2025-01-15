@@ -7,13 +7,20 @@
 
 import Foundation
 
-final class CustomDateFormatter {
+final class CustomFormatter {
     
-    static let shard = CustomDateFormatter()
+    static let shard = CustomFormatter()
     
     private init() {}
     
+    let numFormatter = NumberFormatter()
+    
     let dateFormatter = DateFormatter()
+    
+    func setDecimalNumber(num: Int) -> String {
+        numFormatter.numberStyle = .decimal
+        return numFormatter.string(for: num) ?? "error"
+    }
     
     func setDateInTravelTalk(strDate: String) -> String {
         let inputDate = DateFormatter()

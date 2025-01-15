@@ -133,7 +133,7 @@ extension TravelTalkViewController: UICollectionViewDataSource {
                 image: chatRoom.chatroomImage,
                 nickname: chatRoom.chatroomName,
                 message: chatRoom.chatList[chatRoom.chatList.count-1].message,
-                date: CustomDateFormatter.shard.setDateInTravelTalk(strDate: date)
+                date: CustomFormatter.shard.setDateInTravelTalk(strDate: date)
             )
             
             return groupCell
@@ -144,7 +144,7 @@ extension TravelTalkViewController: UICollectionViewDataSource {
                 image: chatRoom.chatroomImage,
                 nickname: chatRoom.chatroomName,
                 message: chatRoom.chatList[chatRoom.chatList.count-1].message,
-                date: CustomDateFormatter.shard.setDateInTravelTalk(strDate: date)
+                date: CustomFormatter.shard.setDateInTravelTalk(strDate: date)
             )
             
             return cell
