@@ -9,4 +9,75 @@ import UIKit
 
 class ShoppingListCollectionViewCell: UICollectionViewCell {
     
+    static let id = "ShoppingListCollectionViewCell"
+    
+    let imageView = UIImageView()
+    let mallNameLabel = UILabel()
+    let productLabel = UILabel()
+    let priceLabel = UILabel()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setHierarchy()
+        setLayout()
+        setStyle()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setHierarchy() {
+        contentView.addSubviews(imageView,
+                                mallNameLabel,
+                                productLabel,
+                                priceLabel)
+    }
+    
+    func setLayout() {
+        imageView.snp.makeConstraints {
+            $0.top.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(self.snp.width)
+        }
+        
+        mallNameLabel.snp.makeConstraints {
+            $0.top.equalTo(imageView.snp.bottom).offset(4)
+            $0.leading.equalTo(imageView.snp.leading).offset(10)
+        }
+        
+        productLabel.snp.makeConstraints {
+            $0.top.equalTo(mallNameLabel.snp.bottom).offset(4)
+            $0.leading.equalTo(mallNameLabel.snp.leading)
+        }
+        
+        priceLabel.snp.makeConstraints {
+            $0.top.equalTo(productLabel.snp.bottom).offset(4)
+            $0.leading.equalTo(mallNameLabel.snp.leading)
+        }
+    }
+    
+    func setStyle() {
+    }
+    
+    func configureShppingListCell(imageUrl: String,
+                                  shoppingMallName: String,
+                                  productName: String,
+                                  price: Int)
+    {
+        imageView.setImageKfDownSampling(with: imageUrl, cornerRadius: 10)
+        
+        mallNameLabel.setLabelUI(shoppingMallName,
+                                     font: .systemFont(ofSize: 10, weight: .light),
+                                     textColor: .lightGray.withAlphaComponent(0.4))
+        
+        productLabel.setLabelUI(productName,
+                                font: .systemFont(ofSize: 10, weight: .regular),
+                                textColor: .white)
+        
+        priceLabel.setLabelUI(String(price),
+                              font: .systemFont(ofSize: 14, weight: .black),
+                              textColor: .white)
+    }
+    
 }

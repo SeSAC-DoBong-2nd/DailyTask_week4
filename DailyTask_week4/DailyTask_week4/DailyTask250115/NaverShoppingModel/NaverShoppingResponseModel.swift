@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct NaverShoppingResponseModel {
+    let total: String
+    let items: [Items]
+}
+
+struct Items {
+    let image: String
+    let mallName: String
+    let title: String
+    let lprice: Int
+}
+
