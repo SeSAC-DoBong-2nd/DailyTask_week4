@@ -49,6 +49,7 @@ class ShoppingListCollectionViewCell: UICollectionViewCell {
         productLabel.snp.makeConstraints {
             $0.top.equalTo(mallNameLabel.snp.bottom).offset(4)
             $0.leading.equalTo(mallNameLabel.snp.leading)
+            $0.trailing.equalToSuperview().offset(-20)
         }
         
         priceLabel.snp.makeConstraints {
@@ -65,18 +66,18 @@ class ShoppingListCollectionViewCell: UICollectionViewCell {
                                   productName: String,
                                   price: Int)
     {
-        imageView.setImageKfDownSampling(with: imageUrl, cornerRadius: 10)
+        imageView.setImageKfDownSampling(with: imageUrl, cornerRadius: 20)
         
         mallNameLabel.setLabelUI(shoppingMallName,
-                                     font: .systemFont(ofSize: 10, weight: .light),
-                                     textColor: .lightGray.withAlphaComponent(0.4))
+                                     font: .systemFont(ofSize: 12, weight: .light),
+                                     textColor: .lightGray)
         
         productLabel.setLabelUI(productName,
-                                font: .systemFont(ofSize: 10, weight: .regular),
-                                textColor: .white)
+                                font: .systemFont(ofSize: 13, weight: .regular),
+                                textColor: .white, numberOfLines: 2)
         
-        priceLabel.setLabelUI(String(price),
-                              font: .systemFont(ofSize: 14, weight: .black),
+        priceLabel.setLabelUI(CustomFormatter.shard.setDecimalNumber(num: price),
+                              font: .systemFont(ofSize: 16, weight: .medium),
                               textColor: .white)
     }
     

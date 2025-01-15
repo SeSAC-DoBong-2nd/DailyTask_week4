@@ -17,17 +17,25 @@ class NaverShoppingListViewController: BaseViewController {
     let collectionViewInset = 10
     var searchText = "searchText"
     var resultCount = 888
-//    var shoppingList = 
+    var shoppingList: [Items] = [] {
+        didSet {
+            shoppingCollectionView.reloadData()
+        }
+    }
     
     let resultCntLabel = UILabel()
     let filterContainerView = UIView()
-    let shoppingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    lazy var shoppingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        getNaverShoppingAPI(query: searchText)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getNaverShoppingAPI(query: "캠핑카")
+        
+        setRegister()
+        
     }
     
     override func setHierarchy() {
@@ -44,7 +52,7 @@ class NaverShoppingListViewController: BaseViewController {
         
         filterContainerView.snp.makeConstraints {
             $0.top.equalTo(resultCntLabel.snp.bottom).offset(5)
-            $0.leading.equalTo(resultCntLabel.snp.leading)
+            $0.horizontalEdges.equalToSuperview().inset(10)
             $0.height.equalTo(50)
         }
         
@@ -65,24 +73,27 @@ class NaverShoppingListViewController: BaseViewController {
                                                            target: self,
                                                            action: #selector(navLeftBtnTapped))
         
-        resultCntLabel.setLabelUI("\(resultCount) 개의 검색 결과",
-                                  font: .boldSystemFont(ofSize: 12),
+        
+        resultCntLabel.setLabelUI("",
+                                  font: .boldSystemFont(ofSize: 16),
                                   textColor: .systemGreen)
         
         filterContainerView.backgroundColor = .brown
         
         shoppingCollectionView.do {
-            let itemSpacing: CGFloat = 15
+            let itemSpacing: CGFloat = 10
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .vertical
             layout.minimumInteritemSpacing = itemSpacing
-            let widthAbleSize = (UIScreen.main.bounds.width - itemSpacing - CGFloat(collectionViewInset * 2)) / 2
-            layout.itemSize = CGSize(width: widthAbleSize/2, height: widthAbleSize/2 + 40)
+            layout.minimumLineSpacing = 14
+            let widthAbleSize = (UIScreen.main.bounds.width - itemSpacing - CGFloat(collectionViewInset * 2))
+            layout.itemSize = CGSize(width: widthAbleSize/2, height: widthAbleSize/2 + 80)
             $0.collectionViewLayout = layout
             $0.backgroundColor = .clear
+            
         }
     }
-
+    
 }
 
 private extension NaverShoppingListViewController {
@@ -95,9 +106,30 @@ private extension NaverShoppingListViewController {
     }
     
     func getNaverShoppingAPI(query: String) {
-        let url = "https://openapi.naver.com/v1/search/shop.json?query=\(query)"
-        AF.request(url, method: .get, parameters: ["display": 100], headers: [HTTPHeader(name: "X-Naver-Client-Id", value: "ZFh8lFuSTE0h9CfYE75T"), HTTPHeader(name: "X-Naver-Client-Secret", value: "AcXJVWd0OY")]).responseString { response in
+        let url = "https://openapi.naver.com/v1/search/shop.json"
+        AF.request(url,
+                   method: .get,
+                   parameters: ["query": query, "display": 100],
+                   headers: [
+                    HTTPHeader(name: "X-Naver-Client-Id", value: "ZFh8lFuSTE0h9CfYE75T"),
+                    HTTPHeader(name: "X-Naver-Client-Secret",value: "AcXJVWd0OY")
+                   ]).responseDecodable(of: NaverShoppingResponseModel.self)
+        { response in
             print(response)
+            switch response.result {
+                
+            case .success(let result):
+                print("success")
+                
+                self.resultCount = result.total
+                let decimalCnt = CustomFormatter.shard.setDecimalNumber(num: self.resultCount)
+                self.resultCntLabel.text = "\(decimalCnt) 개의 검색 결과"
+                self.shoppingList = result.items
+                
+            case .failure(_):
+                print("failure")
+                
+            }
         }
     }
     
@@ -115,13 +147,27 @@ extension NaverShoppingListViewController: UICollectionViewDelegate {
 
 extension NaverShoppingListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return shoppingList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShoppingListCollectionViewCell.id, for: indexPath) as! ShoppingListCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShoppingListCollectionViewCell.id, for: indexPath) as? ShoppingListCollectionViewCell else { return UICollectionViewCell() }
+        
+        let index = shoppingList[indexPath.item]
+        
+        cell.configureShppingListCell(
+            imageUrl: index.image,
+            shoppingMallName: index.mallName,
+            productName: index.title
+                .replacingOccurrences(of: "<[^>]+>|&quot;",
+                                      with: "",
+                                      options: .regularExpression,
+                                      range: nil),
+            price: Int(index.lprice) ?? 0
+        )
         
         return cell
+        
     }
     
     
