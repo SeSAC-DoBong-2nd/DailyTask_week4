@@ -24,8 +24,6 @@ class NaverSearchViewController: BaseViewController {
     
     override func setHierarchy() {
         view.addSubviews(searchBar, imageView)
-        
-//        emptyView.addSubview()
     }
     
     override func setLayout() {
@@ -65,12 +63,29 @@ private extension NaverSearchViewController {
         searchBar.delegate = self
     }
     
+    func isValidSearchText(text: String) {
+        switch text.count < 2 {
+        case true:
+            let alert = UIAlertUtil.showAlert(title: "조회 실패", message: "2글자 이상 입력해주세요.")
+            present(alert, animated: true)
+        case false:
+            let vc = NaverShoppingListViewController()
+            vc.searchText = text
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 
 extension NaverSearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print(#function, searchBar.text ?? "")
+        guard let text = searchBar.text else {
+            print("searchBarSearchButtonClicked error")
+            return
+        }
+        isValidSearchText(text: text)
         view.endEditing(true)
     }
     
