@@ -15,6 +15,9 @@ import Then
 class NaverShoppingListViewController: BaseViewController {
     
     let collectionViewInset = 10
+    let buttonStrArr = ["  정확도  ", "  날짜순  ", "  가격높은순  ", "  가격낮은순  "]
+    lazy var buttonArr = [accuracyButton, byDateButton, priceHigherButton, priceLowestButton]
+    
     var searchText = "searchText"
     var resultCount = 888
     var shoppingList: [Items] = [] {
@@ -25,23 +28,32 @@ class NaverShoppingListViewController: BaseViewController {
     
     let resultCntLabel = UILabel()
     let filterContainerView = UIView()
+    let accuracyButton = UIButton()
+    let byDateButton = UIButton()
+    let priceHigherButton = UIButton()
+    let priceLowestButton = UIButton()
+    
     lazy var shoppingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     override func viewWillAppear(_ animated: Bool) {
-        getNaverShoppingAPI(query: searchText)
+        getNaverShoppingAPI(query: searchText, filter: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setRegister()
-        
     }
     
     override func setHierarchy() {
         view.addSubviews(resultCntLabel,
                          filterContainerView,
                          shoppingCollectionView)
+        
+        filterContainerView.addSubviews(accuracyButton,
+                                        byDateButton,
+                                        priceHigherButton,
+                                        priceLowestButton)
     }
     
     override func setLayout() {
@@ -51,15 +63,35 @@ class NaverShoppingListViewController: BaseViewController {
         }
         
         filterContainerView.snp.makeConstraints {
-            $0.top.equalTo(resultCntLabel.snp.bottom).offset(5)
-            $0.horizontalEdges.equalToSuperview().inset(10)
-            $0.height.equalTo(50)
+            $0.top.equalTo(resultCntLabel.snp.bottom).offset(10)
+            $0.horizontalEdges.equalToSuperview().inset(7)
+            $0.height.equalTo(35)
         }
         
         shoppingCollectionView.snp.makeConstraints {
-            $0.top.equalTo(filterContainerView.snp.bottom).offset(5)
+            $0.top.equalTo(filterContainerView.snp.bottom).offset(10)
             $0.horizontalEdges.equalToSuperview().inset(collectionViewInset)
             $0.bottom.equalToSuperview()
+        }
+        
+        accuracyButton.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.verticalEdges.equalToSuperview()
+        }
+        
+        byDateButton.snp.makeConstraints {
+            $0.leading.equalTo(accuracyButton.snp.trailing).offset(10)
+            $0.verticalEdges.equalToSuperview()
+        }
+        
+        priceHigherButton.snp.makeConstraints {
+            $0.leading.equalTo(byDateButton.snp.trailing).offset(10)
+            $0.verticalEdges.equalToSuperview()
+        }
+        
+        priceLowestButton.snp.makeConstraints {
+            $0.leading.equalTo(priceHigherButton.snp.trailing).offset(10)
+            $0.verticalEdges.equalToSuperview()
         }
     }
     
@@ -73,12 +105,9 @@ class NaverShoppingListViewController: BaseViewController {
                                                            target: self,
                                                            action: #selector(navLeftBtnTapped))
         
-        
         resultCntLabel.setLabelUI("",
                                   font: .boldSystemFont(ofSize: 16),
                                   textColor: .systemGreen)
-        
-        filterContainerView.backgroundColor = .brown
         
         shoppingCollectionView.do {
             let itemSpacing: CGFloat = 10
@@ -90,7 +119,15 @@ class NaverShoppingListViewController: BaseViewController {
             layout.itemSize = CGSize(width: widthAbleSize/2, height: widthAbleSize/2 + 80)
             $0.collectionViewLayout = layout
             $0.backgroundColor = .clear
-            
+        }
+        
+        for i in 0..<buttonArr.count {
+            buttonArr[i].do {
+                $0.setTitle(buttonStrArr[i], for: .normal)
+                $0.layer.borderWidth = 1
+                $0.layer.borderColor = UIColor.white.cgColor
+                $0.layer.cornerRadius = 10
+            }
         }
     }
     
@@ -102,14 +139,39 @@ private extension NaverShoppingListViewController {
         shoppingCollectionView.delegate = self
         shoppingCollectionView.dataSource = self
         
-        shoppingCollectionView.register(ShoppingListCollectionViewCell.self, forCellWithReuseIdentifier: ShoppingListCollectionViewCell.id)
+        shoppingCollectionView.register(ShoppingListCollectionViewCell.self,
+                                        forCellWithReuseIdentifier: ShoppingListCollectionViewCell.id)
+        
+        buttonArr.forEach { i in
+            i.addTarget(self, action: #selector(filterBtnTapped), for: .touchUpInside)
+        }
     }
     
-    func getNaverShoppingAPI(query: String) {
+    func setSelectedButtonUI(_ sender: UIButton) {
+        for i in buttonArr {
+            if i == sender {
+                i.do {
+                    $0.backgroundColor = .white
+                    $0.setTitleColor(.black, for: .normal)
+                }
+            } else {
+                i.do {
+                    $0.backgroundColor = .black
+                    $0.setTitleColor(.white, for: .normal)
+                }
+            }
+        }
+    }
+    
+    func getNaverShoppingAPI(query: String, filter: String?) {
         let url = "https://openapi.naver.com/v1/search/shop.json"
+        let parameters = (filter == nil)
+        ? ["query": query, "display": 100]
+        : ["query": query, "display": 100, "sort": (filter ?? "")]
+        
         AF.request(url,
                    method: .get,
-                   parameters: ["query": query, "display": 100],
+                   parameters: parameters,
                    headers: [
                     HTTPHeader(name: "X-Naver-Client-Id", value: "ZFh8lFuSTE0h9CfYE75T"),
                     HTTPHeader(name: "X-Naver-Client-Secret",value: "AcXJVWd0OY")
@@ -134,6 +196,30 @@ private extension NaverShoppingListViewController {
     }
     
     @objc
+    func filterBtnTapped(_ sender: UIButton) {
+        guard let title = sender.titleLabel?.text?.trimmingCharacters(in: .whitespaces) else {
+            print("filterBtnTapped error")
+            return
+        }
+        print(#function, title)
+        
+        setSelectedButtonUI(sender)
+        
+        switch title {
+        case "정확도":
+            getNaverShoppingAPI(query: searchText, filter: "sim")
+        case "날짜순":
+            getNaverShoppingAPI(query: searchText, filter: "date")
+        case "가격높은순":
+            getNaverShoppingAPI(query: searchText, filter: "dsc")
+        case "가격낮은순":
+            getNaverShoppingAPI(query: searchText, filter: "asc")
+        default:
+            print("default error")
+        }
+    }
+    
+    @objc
     func navLeftBtnTapped() {
         print(#function)
         navigationController?.popViewController(animated: true)
@@ -143,9 +229,14 @@ private extension NaverShoppingListViewController {
 
 extension NaverShoppingListViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(#function, shoppingList[indexPath.item])
+    }
+    
 }
 
 extension NaverShoppingListViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shoppingList.count
     }
@@ -167,8 +258,6 @@ extension NaverShoppingListViewController: UICollectionViewDataSource {
         )
         
         return cell
-        
     }
-    
     
 }
