@@ -7,16 +7,23 @@
 
 import UIKit
 
+enum FilterButton: String, CaseIterable {
+    case sim = "  정확도  "
+    case date = "  날짜순  "
+    case dsc = "  가격높은순  "
+    case asc = "  가격낮은순  "
+}
+
 final class NaverShoppingListView: BaseView {
     
     private let collectionViewInset = 10
-    private let buttonStrArr = ["  정확도  ", "  날짜순  ", "  가격높은순  ", "  가격낮은순  "]
+    private let buttonStrArr = FilterButton.allCases
     lazy var buttonArr = [accuracyButton, byDateButton, priceHigherButton, priceLowestButton]
     
     let indicatorView = UIActivityIndicatorView(style: .large)
     let resultCntLabel = UILabel()
     private let filterContainerView = UIView()
-    private let accuracyButton = UIButton()
+    let accuracyButton = UIButton()
     private let byDateButton = UIButton()
     private let priceHigherButton = UIButton()
     private let priceLowestButton = UIButton()
@@ -103,7 +110,7 @@ final class NaverShoppingListView: BaseView {
         
         for i in 0..<buttonArr.count {
             buttonArr[i].do {
-                $0.setTitle(buttonStrArr[i], for: .normal)
+                $0.setTitle(buttonStrArr[i].rawValue, for: .normal)
                 $0.layer.borderWidth = 1
                 $0.layer.borderColor = UIColor.white.cgColor
                 $0.layer.cornerRadius = 10

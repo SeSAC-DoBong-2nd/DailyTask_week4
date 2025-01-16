@@ -15,7 +15,11 @@ import Then
 final class NaverShoppingListViewController: BaseViewController {
     
     var searchText = "searchText"
+    private var currentFilter = ""
     private var resultCount = 888
+    private var start = 1
+    private var isEnd = false
+    
     private lazy var heartSelectedArr = Array(repeating: false, count: shoppingList.count)
     private var shoppingList: [Items] = [] {
         didSet {
@@ -39,7 +43,7 @@ final class NaverShoppingListViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         naverShoppingListView.indicatorView.startAnimating()
-        getNaverShoppingAPI(query: searchText, filter: nil)
+        filterBtnTapped(naverShoppingListView.accuracyButton)
     }
     
     override func setStyle() {
@@ -60,6 +64,7 @@ private extension NaverShoppingListViewController {
     func setDelegate() {
         naverShoppingListView.shoppingCollectionView.delegate = self
         naverShoppingListView.shoppingCollectionView.dataSource = self
+        naverShoppingListView.shoppingCollectionView.prefetchDataSource = self
         
         naverShoppingListView.buttonArr.forEach { i in
             i.addTarget(self, action: #selector(filterBtnTapped), for: .touchUpInside)
@@ -82,11 +87,9 @@ private extension NaverShoppingListViewController {
         }
     }
     
-    func getNaverShoppingAPI(query: String, filter: String?) {
+    func getNaverShoppingAPI(query: String, start: Int, filter: String) {
         let url = "https://openapi.naver.com/v1/search/shop.json"
-        let parameters = (filter == nil)
-        ? ["query": query, "display": 100]
-        : ["query": query, "display": 100, "sort": (filter ?? "")]
+        let parameters = ["query": query, "display": 30, "start": start, "sort": filter] as [String : Any]
         
         guard let clientID = Bundle.main.naverClientId else {
             print("clientID 키를 로드하지 못했습니다.")
@@ -112,10 +115,19 @@ private extension NaverShoppingListViewController {
             case .success(let result):
                 print("success")
                 
-//                self.resultCount = result.total
-//                let decimalCnt = CustomFormatter.shard.setDecimalNumber(num: self.resultCount)
+                self.currentFilter = filter
                 self.naverShoppingListView.resultCntLabel.text = "\(Int(result.total).formatted()) 개의 검색 결과"
-                self.shoppingList = result.items
+                self.shoppingList.append(contentsOf: result.items)
+                
+                if self.start == 1 {
+                    self.naverShoppingListView.shoppingCollectionView.scrollsToTop = true
+                }
+                
+                //마지막 페이지 인식할 로직
+                if (Int(result.total) - (start * 30)) < 0 {
+                    self.isEnd = true
+                }
+                
                 self.naverShoppingListView.indicatorView.stopAnimating()
                 
             case .failure(_):
@@ -132,21 +144,28 @@ private extension NaverShoppingListViewController {
             print("filterBtnTapped error")
             return
         }
-        print(#function, title)
-        
-        setSelectedButtonUI(sender)
-        
-        switch title {
-        case "정확도":
-            getNaverShoppingAPI(query: searchText, filter: "sim")
-        case "날짜순":
-            getNaverShoppingAPI(query: searchText, filter: "date")
-        case "가격높은순":
-            getNaverShoppingAPI(query: searchText, filter: "dsc")
-        case "가격낮은순":
-            getNaverShoppingAPI(query: searchText, filter: "asc")
-        default:
-            print("default error")
+        var currentBtnName: String {
+            switch title {
+            case "정확도":
+                "sim"
+            case "날짜순":
+                "date"
+            case "가격높은순":
+                "dsc"
+            case "가격낮은순":
+                "asc"
+            default:
+                ""
+            }
+        }
+        if currentBtnName != currentFilter {
+            start = 1
+            shoppingList.removeAll()
+            setSelectedButtonUI(sender)
+            getNaverShoppingAPI(query: searchText, start: self.start, filter: currentBtnName)
+        }
+         else {
+            print("같은 버튼 눌렀지롱~")
         }
     }
     
@@ -165,6 +184,21 @@ private extension NaverShoppingListViewController {
     func navLeftBtnTapped() {
         print(#function)
         navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+extension NaverShoppingListViewController: UICollectionViewDataSourcePrefetching {
+    
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        print(#function, indexPaths)
+        for i in indexPaths {
+            if (shoppingList.count - 6) == i.item && isEnd == false  {
+                start += 1
+                getNaverShoppingAPI(query: searchText, start: start, filter: currentFilter)
+            }
+        }
+        
     }
     
 }
