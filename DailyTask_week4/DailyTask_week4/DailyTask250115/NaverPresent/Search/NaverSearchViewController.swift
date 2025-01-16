@@ -67,7 +67,7 @@ extension NaverSearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print(#function, searchBar.text ?? "")
-        guard let text = searchBar.text else {
+        guard let text = searchBar.text?.trimmingCharacters(in: .whitespaces) else {
             print("searchBarSearchButtonClicked error")
             return
         }
