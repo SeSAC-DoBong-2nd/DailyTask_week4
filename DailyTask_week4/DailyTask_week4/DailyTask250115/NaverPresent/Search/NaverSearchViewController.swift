@@ -21,7 +21,7 @@ final class NaverSearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setRegister()
+        setDelegate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +30,9 @@ final class NaverSearchViewController: BaseViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         searchView.imageView.isHidden = true
+    }
+    
+    override func setLayout() {
     }
     
     override func setStyle() {
@@ -42,7 +45,7 @@ final class NaverSearchViewController: BaseViewController {
 
 private extension NaverSearchViewController {
     
-    func setRegister() {
+    func setDelegate() {
         searchView.searchBar.delegate = self
     }
     

@@ -18,7 +18,7 @@ final class NaverSearchView: BaseView {
     
     override func setLayout() {
         searchBar.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.equalTo(safeAreaLayoutGuide)
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(40)
         }

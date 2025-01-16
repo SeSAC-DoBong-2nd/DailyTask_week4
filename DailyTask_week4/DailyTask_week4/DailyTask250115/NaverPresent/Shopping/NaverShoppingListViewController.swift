@@ -16,91 +16,30 @@ final class NaverShoppingListViewController: BaseViewController {
     
     var searchText = "searchText"
     private var resultCount = 888
-    private let collectionViewInset = 10
-    private let buttonStrArr = ["  정확도  ", "  날짜순  ", "  가격높은순  ", "  가격낮은순  "]
-    private lazy var buttonArr = [accuracyButton, byDateButton, priceHigherButton, priceLowestButton]
     private lazy var heartSelectedArr = Array(repeating: false, count: shoppingList.count)
     private var shoppingList: [Items] = [] {
         didSet {
-            shoppingCollectionView.reloadData()
+            naverShoppingListView.shoppingCollectionView.reloadData()
             heartSelectedArr = Array(repeating: false, count: shoppingList.count)
         }
     }
     
-    private let indicatorView = UIActivityIndicatorView(style: .large)
-    private let resultCntLabel = UILabel()
-    private let filterContainerView = UIView()
-    private let accuracyButton = UIButton()
-    private let byDateButton = UIButton()
-    private let priceHigherButton = UIButton()
-    private let priceLowestButton = UIButton()
-    private lazy var shoppingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let naverShoppingListView = NaverShoppingListView()
+    
+    override func loadView() {
+        view = naverShoppingListView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setRegister()
+        setDelegate()
         view.backgroundColor = .black
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        indicatorView.startAnimating()
+        naverShoppingListView.indicatorView.startAnimating()
         getNaverShoppingAPI(query: searchText, filter: nil)
-    }
-    
-    override func setHierarchy() {
-        view.addSubviews(resultCntLabel,
-                         filterContainerView,
-                         shoppingCollectionView,
-                         indicatorView)
-        
-        filterContainerView.addSubviews(accuracyButton,
-                                        byDateButton,
-                                        priceHigherButton,
-                                        priceLowestButton)
-    }
-    
-    override func setLayout() {
-        indicatorView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-        }
-        
-        resultCntLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.leading.equalToSuperview().offset(10)
-        }
-        
-        filterContainerView.snp.makeConstraints {
-            $0.top.equalTo(resultCntLabel.snp.bottom).offset(10)
-            $0.horizontalEdges.equalToSuperview().inset(7)
-            $0.height.equalTo(35)
-        }
-        
-        shoppingCollectionView.snp.makeConstraints {
-            $0.top.equalTo(filterContainerView.snp.bottom).offset(10)
-            $0.horizontalEdges.equalToSuperview().inset(collectionViewInset)
-            $0.bottom.equalToSuperview()
-        }
-        
-        accuracyButton.snp.makeConstraints {
-            $0.leading.equalToSuperview()
-            $0.verticalEdges.equalToSuperview()
-        }
-        
-        byDateButton.snp.makeConstraints {
-            $0.leading.equalTo(accuracyButton.snp.trailing).offset(10)
-            $0.verticalEdges.equalToSuperview()
-        }
-        
-        priceHigherButton.snp.makeConstraints {
-            $0.leading.equalTo(byDateButton.snp.trailing).offset(10)
-            $0.verticalEdges.equalToSuperview()
-        }
-        
-        priceLowestButton.snp.makeConstraints {
-            $0.leading.equalTo(priceHigherButton.snp.trailing).offset(10)
-            $0.verticalEdges.equalToSuperview()
-        }
     }
     
     override func setStyle() {
@@ -112,55 +51,23 @@ final class NaverShoppingListViewController: BaseViewController {
                                                            style: .done,
                                                            target: self,
                                                            action: #selector(navLeftBtnTapped))
-        
-        indicatorView.do {
-            $0.color = .lightGray
-        }
-        
-        resultCntLabel.setLabelUI("",
-                                  font: .boldSystemFont(ofSize: 16),
-                                  textColor: .systemGreen)
-        
-        shoppingCollectionView.do {
-            let itemSpacing: CGFloat = 10
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .vertical
-            layout.minimumInteritemSpacing = itemSpacing
-            layout.minimumLineSpacing = 14
-            let widthAbleSize = (UIScreen.main.bounds.width - itemSpacing - CGFloat(collectionViewInset * 2))
-            layout.itemSize = CGSize(width: widthAbleSize/2, height: widthAbleSize/2 + 80)
-            $0.collectionViewLayout = layout
-            $0.backgroundColor = .clear
-        }
-        
-        for i in 0..<buttonArr.count {
-            buttonArr[i].do {
-                $0.setTitle(buttonStrArr[i], for: .normal)
-                $0.layer.borderWidth = 1
-                $0.layer.borderColor = UIColor.white.cgColor
-                $0.layer.cornerRadius = 10
-            }
-        }
     }
     
 }
 
 private extension NaverShoppingListViewController {
     
-    func setRegister() {
-        shoppingCollectionView.delegate = self
-        shoppingCollectionView.dataSource = self
+    func setDelegate() {
+        naverShoppingListView.shoppingCollectionView.delegate = self
+        naverShoppingListView.shoppingCollectionView.dataSource = self
         
-        shoppingCollectionView.register(ShoppingListCollectionViewCell.self,
-                                        forCellWithReuseIdentifier: ShoppingListCollectionViewCell.id)
-        
-        buttonArr.forEach { i in
+        naverShoppingListView.buttonArr.forEach { i in
             i.addTarget(self, action: #selector(filterBtnTapped), for: .touchUpInside)
         }
     }
     
     func setSelectedButtonUI(_ sender: UIButton) {
-        for i in buttonArr {
+        for i in naverShoppingListView.buttonArr {
             if i == sender {
                 i.do {
                     $0.backgroundColor = .white
@@ -205,11 +112,11 @@ private extension NaverShoppingListViewController {
             case .success(let result):
                 print("success")
                 
-                self.resultCount = result.total
-                let decimalCnt = CustomFormatter.shard.setDecimalNumber(num: self.resultCount)
-                self.resultCntLabel.text = "\(decimalCnt) 개의 검색 결과"
+//                self.resultCount = result.total
+//                let decimalCnt = CustomFormatter.shard.setDecimalNumber(num: self.resultCount)
+                self.naverShoppingListView.resultCntLabel.text = "\(Int(result.total).formatted()) 개의 검색 결과"
                 self.shoppingList = result.items
-                self.indicatorView.stopAnimating()
+                self.naverShoppingListView.indicatorView.stopAnimating()
                 
             case .failure(_):
                 print("failure")
