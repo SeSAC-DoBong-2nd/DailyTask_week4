@@ -279,9 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				9E78832B2D379C4700A3697D /* NaverShoppingModel */,
-				9E7883222D37828300A3697D /* NaverSearchViewController.swift */,
-				9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */,
-				9E7883292D37963D00A3697D /* ShoppingListCollectionViewCell.swift */,
+				9E7883452D38FA4400A3697D /* NaverPresent */,
 			);
 			path = DailyTask250115;
 			sourceTree = "<group>";
@@ -292,6 +290,48 @@
 				9E78832C2D379C6600A3697D /* NaverShoppingResponseModel.swift */,
 			);
 			path = NaverShoppingModel;
+			sourceTree = "<group>";
+		};
+		9E7883452D38FA4400A3697D /* NaverPresent */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883462D38FADC00A3697D /* Search */,
+				9E7883472D38FAE000A3697D /* Shopping */,
+			);
+			path = NaverPresent;
+			sourceTree = "<group>";
+		};
+		9E7883462D38FADC00A3697D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883482D38FAFA00A3697D /* View */,
+				9E7883222D37828300A3697D /* NaverSearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9E7883472D38FAE000A3697D /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883492D38FB0100A3697D /* Cell */,
+				9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		9E7883482D38FAFA00A3697D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E7883492D38FB0100A3697D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883292D37963D00A3697D /* ShoppingListCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9EBB07242D34F3A6002C52D6 = {
