@@ -18,6 +18,8 @@
 		9E7883252D3782BE00A3697D /* NaverShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */; };
 		9E78832A2D37963D00A3697D /* ShoppingListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883292D37963D00A3697D /* ShoppingListCollectionViewCell.swift */; };
 		9E78832D2D379C6600A3697D /* NaverShoppingResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78832C2D379C6600A3697D /* NaverShoppingResponseModel.swift */; };
+		9E78834B2D38FB5100A3697D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78834A2D38FB5100A3697D /* BaseView.swift */; };
+		9E78834D2D38FB7300A3697D /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78834C2D38FB7300A3697D /* BaseCollectionViewCell.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -123,6 +125,8 @@
 		9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingListViewController.swift; sourceTree = "<group>"; };
 		9E7883292D37963D00A3697D /* ShoppingListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCollectionViewCell.swift; sourceTree = "<group>"; };
 		9E78832C2D379C6600A3697D /* NaverShoppingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingResponseModel.swift; sourceTree = "<group>"; };
+		9E78834A2D38FB5100A3697D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		9E78834C2D38FB7300A3697D /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				9E7882FB2D36B80B00A3697D /* BaseViewController.swift */,
+				9E78834A2D38FB5100A3697D /* BaseView.swift */,
+				9E78834C2D38FB7300A3697D /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -784,6 +790,7 @@
 				9EBB08842D34F431002C52D6 /* MagazineModel.swift in Sources */,
 				9EBB08852D34F431002C52D6 /* MagazineTableViewCell.swift in Sources */,
 				9EBB08862D34F431002C52D6 /* MagazineTableViewController.swift in Sources */,
+				9E78834B2D38FB5100A3697D /* BaseView.swift in Sources */,
 				9EBB08872D34F431002C52D6 /* ShoppingTableViewCell.swift in Sources */,
 				9EBB08882D34F431002C52D6 /* ShoppingTableViewController.swift in Sources */,
 				9EBB08892D34F431002C52D6 /* ShoppingTableViewHeaderCell.swift in Sources */,
@@ -797,6 +804,7 @@
 				9EBB08912D34F431002C52D6 /* TravelTableViewCell.swift in Sources */,
 				9E78832A2D37963D00A3697D /* ShoppingListCollectionViewCell.swift in Sources */,
 				9EBB08922D34F431002C52D6 /* TravelTableViewController.swift in Sources */,
+				9E78834D2D38FB7300A3697D /* BaseCollectionViewCell.swift in Sources */,
 				9E7883232D37828300A3697D /* NaverSearchViewController.swift in Sources */,
 				9EBB08932D34F431002C52D6 /* CityModel.swift in Sources */,
 				9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */,
