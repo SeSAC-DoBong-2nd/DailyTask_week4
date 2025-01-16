@@ -26,7 +26,7 @@ class NaverNetworkManager {
                               complition: @escaping (NaverShoppingResponseModel, Int) -> ()) {
         AF.request(url,method: .get,parameters: parameters,headers: [
                     HTTPHeader(name: "X-Naver-Client-Id", value: clientID),
-                    HTTPHeader(name: "X-Naver-Client-Secre",value: clientSecret)
+                    HTTPHeader(name: "X-Naver-Client-Secret",value: clientSecret)
                    ]).responseDecodable(of: NaverShoppingResponseModel.self)
         { response in
             guard let statusCode = response.response?.statusCode else {

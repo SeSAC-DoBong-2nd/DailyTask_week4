@@ -218,7 +218,7 @@ extension NaverShoppingListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShoppingListCollectionViewCell.id, for: indexPath) as? ShoppingListCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShoppingListCollectionViewCell.cellIdentifier, for: indexPath) as? ShoppingListCollectionViewCell else { return UICollectionViewCell() }
         
         let index = shoppingList[indexPath.item]
         cell.heartButton.tag = indexPath.item

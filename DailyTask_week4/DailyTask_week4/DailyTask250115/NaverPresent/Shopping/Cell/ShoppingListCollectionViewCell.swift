@@ -7,9 +7,7 @@
 
 import UIKit
 
-final class ShoppingListCollectionViewCell: UICollectionViewCell {
-    
-    static let id = "ShoppingListCollectionViewCell"
+final class ShoppingListCollectionViewCell: BaseCollectionViewCell {
     
     private let imageView = UIImageView()
     private let mallNameLabel = UILabel()
@@ -17,23 +15,11 @@ final class ShoppingListCollectionViewCell: UICollectionViewCell {
     private let priceLabel = UILabel()
     let heartButton = UIButton()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setHierarchy()
-        setLayout()
-        setStyle()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func prepareForReuse() {
         heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
     }
     
-    private func setHierarchy() {
+    override func setHierarchy() {
         contentView.addSubviews(imageView,
                                 mallNameLabel,
                                 productLabel,
@@ -42,7 +28,7 @@ final class ShoppingListCollectionViewCell: UICollectionViewCell {
         imageView.addSubview(heartButton)
     }
     
-    private func setLayout() {
+    override func setLayout() {
         imageView.snp.makeConstraints {
             $0.top.horizontalEdges.equalToSuperview()
             $0.height.equalTo(self.snp.width)
@@ -70,7 +56,7 @@ final class ShoppingListCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    private func setStyle() {
+    override func setStyle() {
         imageView.isUserInteractionEnabled = true
         
         heartButton.do {

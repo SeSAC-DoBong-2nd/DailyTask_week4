@@ -105,7 +105,7 @@ final class NaverShoppingListView: BaseView {
             $0.collectionViewLayout = layout
             $0.backgroundColor = .clear
             $0.register(ShoppingListCollectionViewCell.self,
-                        forCellWithReuseIdentifier: ShoppingListCollectionViewCell.id)
+                        forCellWithReuseIdentifier: ShoppingListCollectionViewCell.cellIdentifier)
         }
         
         for i in 0..<buttonArr.count {
