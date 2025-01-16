@@ -22,6 +22,7 @@
 		9E78834D2D38FB7300A3697D /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78834C2D38FB7300A3697D /* BaseCollectionViewCell.swift */; };
 		9E78834F2D38FBB600A3697D /* NaverSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78834E2D38FBB600A3697D /* NaverSearchView.swift */; };
 		9E7883542D3905C600A3697D /* NaverShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883532D3905C600A3697D /* NaverShoppingListView.swift */; };
+		9E7883572D391E4A00A3697D /* NaverNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -131,6 +132,7 @@
 		9E78834C2D38FB7300A3697D /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		9E78834E2D38FBB600A3697D /* NaverSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchView.swift; sourceTree = "<group>"; };
 		9E7883532D3905C600A3697D /* NaverShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingListView.swift; sourceTree = "<group>"; };
+		9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverNetworkManager.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 		9E7883212D37824700A3697D /* DailyTask250115 */ = {
 			isa = PBXGroup;
 			children = (
+				9E7883552D391E2000A3697D /* NaverNetwork */,
 				9E78832B2D379C4700A3697D /* NaverShoppingModel */,
 				9E7883452D38FA4400A3697D /* NaverPresent */,
 			);
@@ -352,6 +355,14 @@
 				9E7883532D3905C600A3697D /* NaverShoppingListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9E7883552D391E2000A3697D /* NaverNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */,
+			);
+			path = NaverNetwork;
 			sourceTree = "<group>";
 		};
 		9EBB07242D34F3A6002C52D6 = {
@@ -802,6 +813,7 @@
 				9EBB08822D34F431002C52D6 /* Case2TableViewController.swift in Sources */,
 				9EBB08832D34F431002C52D6 /* Case3TableViewController.swift in Sources */,
 				9EBB08842D34F431002C52D6 /* MagazineModel.swift in Sources */,
+				9E7883572D391E4A00A3697D /* NaverNetworkManager.swift in Sources */,
 				9EBB08852D34F431002C52D6 /* MagazineTableViewCell.swift in Sources */,
 				9EBB08862D34F431002C52D6 /* MagazineTableViewController.swift in Sources */,
 				9E78834B2D38FB5100A3697D /* BaseView.swift in Sources */,

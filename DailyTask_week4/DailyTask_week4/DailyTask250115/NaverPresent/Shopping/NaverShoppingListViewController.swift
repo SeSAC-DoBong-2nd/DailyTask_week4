@@ -86,7 +86,7 @@ private extension NaverShoppingListViewController {
             }
         }
     }
-    
+
     func getNaverShoppingAPI(query: String, start: Int, filter: String) {
         let url = "https://openapi.naver.com/v1/search/shop.json"
         let parameters = ["query": query, "display": 30, "start": start, "sort": filter] as [String : Any]
@@ -101,20 +101,15 @@ private extension NaverShoppingListViewController {
             return
         }
         
-        AF.request(url,
-                   method: .get,
-                   parameters: parameters,
-                   headers: [
-                    HTTPHeader(name: "X-Naver-Client-Id", value: clientID),
-                    HTTPHeader(name: "X-Naver-Client-Secret",value: clientSecret)
-                   ]).responseDecodable(of: NaverShoppingResponseModel.self)
+        NaverNetworkManager.shared.getNaverShoppingList(
+            url: url,
+            parameters: parameters,
+            clientID: clientID,
+            clientSecret: clientSecret
+        )
         { response in
-            print(response)
-            switch response.result {
-                
+            switch response {
             case .success(let result):
-                print("success")
-                
                 self.currentFilter = filter
                 self.naverShoppingListView.resultCntLabel.text = "\(Int(result.total).formatted()) 개의 검색 결과"
                 self.shoppingList.append(contentsOf: result.items)
@@ -129,13 +124,8 @@ private extension NaverShoppingListViewController {
                 }
                 
                 self.naverShoppingListView.indicatorView.stopAnimating()
-                
-            case .failure(_):
-                print("failure")
-                
             }
         }
-        
     }
     
     @objc
