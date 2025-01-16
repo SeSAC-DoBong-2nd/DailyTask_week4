@@ -101,30 +101,40 @@ private extension NaverShoppingListViewController {
             return
         }
         
-        NaverNetworkManager.shared.getNaverShoppingList(
-            url: url,
-            parameters: parameters,
-            clientID: clientID,
-            clientSecret: clientSecret
-        )
-        { response in
-            switch response {
-            case .success(let result):
+        NaverNetworkManager.shared.getNaverShoppingList(url: url,
+                                                        parameters: parameters,
+                                                        clientID: clientID,
+                                                        clientSecret: clientSecret) { response, statusCode  in
+            switch statusCode {
+            case (200..<299):
                 self.currentFilter = filter
-                self.naverShoppingListView.resultCntLabel.text = "\(Int(result.total).formatted()) 개의 검색 결과"
-                self.shoppingList.append(contentsOf: result.items)
+                self.naverShoppingListView.resultCntLabel.text = "\(Int(response.total).formatted()) 개의 검색 결과"
+                self.shoppingList.append(contentsOf: response.items)
                 
                 if self.start == 1 {
                     self.naverShoppingListView.shoppingCollectionView.scrollsToTop = true
                 }
                 
                 //마지막 페이지 인식할 로직
-                if (Int(result.total) - (start * 30)) < 0 {
+                if (Int(response.total) - (start * 30)) < 0 {
                     self.isEnd = true
                 }
                 
                 self.naverShoppingListView.indicatorView.stopAnimating()
+            case (400..<499):
+                print("클라 에러 대응")
+                let alert = UIAlertUtil.showAlert(title: "요청 실패", message: "요청 값을 확인하여 주세요.")
+                self.present(alert, animated: true)
+            case (500...):
+                print("서버 에러 대응")
+                let alert = UIAlertUtil.showAlert(title: "요청 실패", message: "서버 에러")
+                self.present(alert, animated: true)
+            default:
+                let alert = UIAlertUtil.showAlert(title: "요청 실패", message: "Error")
+                self.present(alert, animated: true)
+                print("에러 발생")
             }
+            
         }
     }
     

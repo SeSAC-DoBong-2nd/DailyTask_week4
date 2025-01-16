@@ -23,16 +23,19 @@ class NaverNetworkManager {
                               parameters: [String: Any],
                               clientID: String,
                               clientSecret: String,
-                              complition: @escaping (NetworkResult<NaverShoppingResponseModel>) -> ()) {
+                              complition: @escaping (NaverShoppingResponseModel, Int) -> ()) {
         AF.request(url,method: .get,parameters: parameters,headers: [
                     HTTPHeader(name: "X-Naver-Client-Id", value: clientID),
-                    HTTPHeader(name: "X-Naver-Client-Secret",value: clientSecret)
+                    HTTPHeader(name: "X-Naver-Client-Secre",value: clientSecret)
                    ]).responseDecodable(of: NaverShoppingResponseModel.self)
         { response in
+            guard let statusCode = response.response?.statusCode else {
+                return
+            }
             switch response.result {
             case .success(let result):
                 print("success")
-                complition(.success(result))
+                complition(result, statusCode)
             case .failure(let error):
                 print("🔥",error)
             }
