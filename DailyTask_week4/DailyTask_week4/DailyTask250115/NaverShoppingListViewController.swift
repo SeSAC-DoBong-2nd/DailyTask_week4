@@ -14,13 +14,12 @@ import Then
 
 final class NaverShoppingListViewController: BaseViewController {
     
+    var searchText = "searchText"
+    private var resultCount = 888
     private let collectionViewInset = 10
     private let buttonStrArr = ["  정확도  ", "  날짜순  ", "  가격높은순  ", "  가격낮은순  "]
     private lazy var buttonArr = [accuracyButton, byDateButton, priceHigherButton, priceLowestButton]
     private lazy var heartSelectedArr = Array(repeating: false, count: shoppingList.count)
-    
-    var searchText = "searchText"
-    private var resultCount = 888
     private var shoppingList: [Items] = [] {
         didSet {
             shoppingCollectionView.reloadData()
@@ -28,29 +27,32 @@ final class NaverShoppingListViewController: BaseViewController {
         }
     }
     
+    private let indicatorView = UIActivityIndicatorView(style: .large)
     private let resultCntLabel = UILabel()
     private let filterContainerView = UIView()
     private let accuracyButton = UIButton()
     private let byDateButton = UIButton()
     private let priceHigherButton = UIButton()
     private let priceLowestButton = UIButton()
-    
     private lazy var shoppingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    
-    override func viewWillAppear(_ animated: Bool) {
-        getNaverShoppingAPI(query: searchText, filter: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setRegister()
+        view.backgroundColor = .black
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        indicatorView.startAnimating()
+        getNaverShoppingAPI(query: searchText, filter: nil)
     }
     
     override func setHierarchy() {
         view.addSubviews(resultCntLabel,
                          filterContainerView,
-                         shoppingCollectionView)
+                         shoppingCollectionView,
+                         indicatorView)
         
         filterContainerView.addSubviews(accuracyButton,
                                         byDateButton,
@@ -59,6 +61,10 @@ final class NaverShoppingListViewController: BaseViewController {
     }
     
     override func setLayout() {
+        indicatorView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+        
         resultCntLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.equalToSuperview().offset(10)
@@ -106,6 +112,10 @@ final class NaverShoppingListViewController: BaseViewController {
                                                            style: .done,
                                                            target: self,
                                                            action: #selector(navLeftBtnTapped))
+        
+        indicatorView.do {
+            $0.color = .lightGray
+        }
         
         resultCntLabel.setLabelUI("",
                                   font: .boldSystemFont(ofSize: 16),
@@ -199,12 +209,14 @@ private extension NaverShoppingListViewController {
                 let decimalCnt = CustomFormatter.shard.setDecimalNumber(num: self.resultCount)
                 self.resultCntLabel.text = "\(decimalCnt) 개의 검색 결과"
                 self.shoppingList = result.items
+                self.indicatorView.stopAnimating()
                 
             case .failure(_):
                 print("failure")
                 
             }
         }
+        
     }
     
     @objc

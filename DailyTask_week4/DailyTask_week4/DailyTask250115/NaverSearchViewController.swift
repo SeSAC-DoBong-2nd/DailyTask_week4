@@ -13,13 +13,21 @@ import Then
 final class NaverSearchViewController: BaseViewController {
     
     private let searchBar = UISearchBar()
-    private let emptyView = UIView()
     private let imageView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setRegister()
+        view.backgroundColor = .black
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.imageView.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.imageView.isHidden = true
     }
     
     override func setHierarchy() {
