@@ -115,7 +115,7 @@ class MovieListViewController: UIViewController {
 private extension MovieListViewController {
     
     func returnYesterday() -> String {
-        let dateFormat = CustomDateFormatter.shard.dateFormatter
+        let dateFormat = CustomFormatter.shard.dateFormatter
         dateFormat.dateFormat = "yyyyMMdd"
         let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())
         
@@ -153,7 +153,7 @@ private extension MovieListViewController {
     func searchBtnTapped() {
         view.endEditing(true)
         
-        let dateFormat = CustomDateFormatter.shard.dateFormatter
+        let dateFormat = CustomFormatter.shard.dateFormatter
         dateFormat.dateFormat = "yyyyMMdd"
         if dateFormat.date(from: currentTextFieldText) != nil {
             getMovieList(date: textField.text ?? "")

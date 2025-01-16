@@ -14,6 +14,10 @@
 		9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883082D36E3C400A3697D /* MovieResponseModel.swift */; };
 		9E78830B2D36F15600A3697D /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9E78830A2D36F15600A3697D /* Secret.xcconfig */; };
 		9E78830D2D36F20200A3697D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */; };
+		9E7883232D37828300A3697D /* NaverSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883222D37828300A3697D /* NaverSearchViewController.swift */; };
+		9E7883252D3782BE00A3697D /* NaverShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */; };
+		9E78832A2D37963D00A3697D /* ShoppingListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883292D37963D00A3697D /* ShoppingListCollectionViewCell.swift */; };
+		9E78832D2D379C6600A3697D /* NaverShoppingResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78832C2D379C6600A3697D /* NaverShoppingResponseModel.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -115,6 +119,10 @@
 		9E7883082D36E3C400A3697D /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
 		9E78830A2D36F15600A3697D /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 		9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		9E7883222D37828300A3697D /* NaverSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchViewController.swift; sourceTree = "<group>"; };
+		9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingListViewController.swift; sourceTree = "<group>"; };
+		9E7883292D37963D00A3697D /* ShoppingListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E78832C2D379C6600A3697D /* NaverShoppingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingResponseModel.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,6 +273,25 @@
 				9E7883082D36E3C400A3697D /* MovieResponseModel.swift */,
 			);
 			path = MovieModel;
+			sourceTree = "<group>";
+		};
+		9E7883212D37824700A3697D /* DailyTask250115 */ = {
+			isa = PBXGroup;
+			children = (
+				9E78832B2D379C4700A3697D /* NaverShoppingModel */,
+				9E7883222D37828300A3697D /* NaverSearchViewController.swift */,
+				9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */,
+				9E7883292D37963D00A3697D /* ShoppingListCollectionViewCell.swift */,
+			);
+			path = DailyTask250115;
+			sourceTree = "<group>";
+		};
+		9E78832B2D379C4700A3697D /* NaverShoppingModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E78832C2D379C6600A3697D /* NaverShoppingResponseModel.swift */,
+			);
+			path = NaverShoppingModel;
 			sourceTree = "<group>";
 		};
 		9EBB07242D34F3A6002C52D6 = {
@@ -569,6 +596,7 @@
 				9EBB08592D34F431002C52D6 /* DailyTask250110 */,
 				9EBB08D32D34F6C9002C52D6 /* DailyTask250113,250114 */,
 				9E7882FD2D36B8DF00A3697D /* DailyTask250114 */,
+				9E7883212D37824700A3697D /* DailyTask250115 */,
 				9E7882FA2D36B7F400A3697D /* Base */,
 				9EBB085F2D34F431002C52D6 /* Extension */,
 				9EBB08752D34F431002C52D6 /* Util */,
@@ -727,7 +755,9 @@
 				9EBB088F2D34F431002C52D6 /* TouristPlaceViewController.swift in Sources */,
 				9EBB08902D34F431002C52D6 /* TravelModel.swift in Sources */,
 				9EBB08912D34F431002C52D6 /* TravelTableViewCell.swift in Sources */,
+				9E78832A2D37963D00A3697D /* ShoppingListCollectionViewCell.swift in Sources */,
 				9EBB08922D34F431002C52D6 /* TravelTableViewController.swift in Sources */,
+				9E7883232D37828300A3697D /* NaverSearchViewController.swift in Sources */,
 				9EBB08932D34F431002C52D6 /* CityModel.swift in Sources */,
 				9EBB08DE2D350C01002C52D6 /* NaverPayViewController.swift in Sources */,
 				9E78830D2D36F20200A3697D /* Bundle+Extension.swift in Sources */,
@@ -735,12 +765,14 @@
 				9EBB08952D34F431002C52D6 /* CityTableViewController.swift in Sources */,
 				9EBB08962D34F431002C52D6 /* JustClapViewController.swift in Sources */,
 				9EBB08D72D34FE19002C52D6 /* DailyTask250113ViewController.swift in Sources */,
+				9E7883252D3782BE00A3697D /* NaverShoppingListViewController.swift in Sources */,
 				9EBB08972D34F431002C52D6 /* Restaurant.swift in Sources */,
 				9EBB08E22D351DFE002C52D6 /* MovieList.swift in Sources */,
 				9EBB08982D34F431002C52D6 /* RestaurantViewController.swift in Sources */,
 				9EBB08992D34F431002C52D6 /* GameCollectionViewCell.swift in Sources */,
 				9EBB08D92D34FFA9002C52D6 /* NetflixViewController.swift in Sources */,
 				9EBB089A2D34F431002C52D6 /* GameWaitingViewController.swift in Sources */,
+				9E78832D2D379C6600A3697D /* NaverShoppingResponseModel.swift in Sources */,
 				9EBB089B2D34F431002C52D6 /* UpDownGameViewController.swift in Sources */,
 				9E7883002D36B94B00A3697D /* LotteryViewController.swift in Sources */,
 				9EBB089C2D34F431002C52D6 /* ChatViewController.swift in Sources */,

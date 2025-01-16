@@ -43,6 +43,7 @@ extension UIImageView {
                 .cacheOriginalImage
             ]
         )
+        self.clipsToBounds = true
         self.contentMode = .scaleAspectFill
         self.layer.cornerRadius = CGFloat(cornerRadius)
     }

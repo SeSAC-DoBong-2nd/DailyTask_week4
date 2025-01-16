@@ -13,4 +13,12 @@ extension Bundle {
         return infoDictionary?["API_KEY"] as? String
     }
     
+    var naverClientId: String? {
+        return infoDictionary?["ClIENT_ID"] as? String
+    }
+    
+    var naverClientSecret: String? {
+        return infoDictionary?["ClIENT_SECRET"] as? String
+    }
+    
 }
