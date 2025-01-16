@@ -20,6 +20,7 @@
 		9E78832D2D379C6600A3697D /* NaverShoppingResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78832C2D379C6600A3697D /* NaverShoppingResponseModel.swift */; };
 		9E78834B2D38FB5100A3697D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78834A2D38FB5100A3697D /* BaseView.swift */; };
 		9E78834D2D38FB7300A3697D /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78834C2D38FB7300A3697D /* BaseCollectionViewCell.swift */; };
+		9E78834F2D38FBB600A3697D /* NaverSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78834E2D38FBB600A3697D /* NaverSearchView.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -127,6 +128,7 @@
 		9E78832C2D379C6600A3697D /* NaverShoppingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingResponseModel.swift; sourceTree = "<group>"; };
 		9E78834A2D38FB5100A3697D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9E78834C2D38FB7300A3697D /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E78834E2D38FBB600A3697D /* NaverSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchView.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 		9E7883482D38FAFA00A3697D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9E78834E2D38FBB600A3697D /* NaverSearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -832,6 +835,7 @@
 				9EBB08A22D34F431002C52D6 /* TravelTalkCollectionViewCell.swift in Sources */,
 				9EBB08A32D34F431002C52D6 /* TravelTalkViewController.swift in Sources */,
 				9EBB08A42D34F431002C52D6 /* UIButton+Extension.swift in Sources */,
+				9E78834F2D38FBB600A3697D /* NaverSearchView.swift in Sources */,
 				9EBB08A52D34F431002C52D6 /* UIImageView+Extension.swift in Sources */,
 				9EBB08A62D34F431002C52D6 /* UILabel+Extension.swift in Sources */,
 				9EBB08A72D34F431002C52D6 /* UITextField+Extension.swift in Sources */,

@@ -12,55 +12,30 @@ import Then
 
 final class NaverSearchViewController: BaseViewController {
     
-    private let searchBar = UISearchBar()
-    private let imageView = UIImageView()
+    private let searchView = NaverSearchView()
+    
+    override func loadView() {
+        self.view = searchView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setRegister()
-        view.backgroundColor = .black
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.imageView.isHidden = false
+        searchView.imageView.isHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.imageView.isHidden = true
-    }
-    
-    override func setHierarchy() {
-        view.addSubviews(searchBar, imageView)
-    }
-    
-    override func setLayout() {
-        searchBar.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(40)
-        }
-        
-        imageView.snp.makeConstraints {
-            $0.top.equalTo(searchBar.snp.bottom).offset(170)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(320)
-            $0.height.equalTo(300)
-        }
+        searchView.imageView.isHidden = true
     }
     
     override func setStyle() {
         view.backgroundColor = .black
         
         navigationItem.title = "psy의 쇼핑쇼핑"
-        
-        searchBar.do {
-            $0.placeholder = "브랜드, 상품, 프로필, 태그 등"
-        }
-        
-        imageView.do {
-            $0.image = UIImage(resource: .emptyView)
-        }
     }
 
 }
@@ -68,7 +43,7 @@ final class NaverSearchViewController: BaseViewController {
 private extension NaverSearchViewController {
     
     func setRegister() {
-        searchBar.delegate = self
+        searchView.searchBar.delegate = self
     }
     
     func isValidSearchText(text: String) {
