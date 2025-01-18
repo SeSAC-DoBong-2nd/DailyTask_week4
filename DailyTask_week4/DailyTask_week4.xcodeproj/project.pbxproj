@@ -435,13 +435,6 @@
 			path = DailyTask250102;
 			sourceTree = "<group>";
 		};
-		9EBB08202D34F431002C52D6 /* DailyTask250103 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DailyTask250103;
-			sourceTree = "<group>";
-		};
 		9EBB08242D34F431002C52D6 /* MagazineTap */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,7 +652,6 @@
 				9EBB080E2D34F431002C52D6 /* Application */,
 				9EBB081B2D34F431002C52D6 /* DailyTask241231 */,
 				9EBB081F2D34F431002C52D6 /* DailyTask250102 */,
-				9EBB08202D34F431002C52D6 /* DailyTask250103 */,
 				9EBB08352D34F431002C52D6 /* DailyTask250103,250107 */,
 				9EBB083B2D34F431002C52D6 /* DailyTask250106,250107 */,
 				9EBB08412D34F431002C52D6 /* DailyTask250108 */,
