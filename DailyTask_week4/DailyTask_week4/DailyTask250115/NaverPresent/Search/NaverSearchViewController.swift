@@ -36,7 +36,7 @@ final class NaverSearchViewController: BaseViewController {
     }
     
     override func setStyle() {
-        view.backgroundColor = .black   
+        view.backgroundColor = .black
     }
 
 }
@@ -57,8 +57,9 @@ private extension NaverSearchViewController {
             guard let self else {return}
             switch value {
             case true:
-                let vc = NaverShoppingListViewController()
-                vc.searchText = self.viewModel.inputSearchText.value ?? "실패"
+                let vcViewModel = NaverShoppingListViewModel()
+                vcViewModel.outputNavTitle.value = self.viewModel.inputSearchText.value ?? "실패"
+                let vc = NaverShoppingListViewController(viewModel: vcViewModel)
                 self.navigationController?.pushViewController(vc, animated: true)
             case false:
                 let alert = UIAlertUtil.showAlert(title: "조회 실패", message: "2글자 이상 입력해주세요.")
