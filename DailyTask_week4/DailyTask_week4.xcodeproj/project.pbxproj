@@ -24,6 +24,7 @@
 		9E7883572D391E4A00A3697D /* NaverNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */; };
 		9EA2D6032D549D8900FDF92B /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9EA2D6022D549D8900FDF92B /* Secret.xcconfig */; };
 		9EA2D6052D549F2400FDF92B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2D6042D549F2400FDF92B /* Observable.swift */; };
+		9EA2D6092D549FAB00FDF92B /* NaverSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2D6082D549FAB00FDF92B /* NaverSearchViewModel.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -135,6 +136,7 @@
 		9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverNetworkManager.swift; sourceTree = "<group>"; };
 		9EA2D6022D549D8900FDF92B /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 		9EA2D6042D549F2400FDF92B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		9EA2D6082D549FAB00FDF92B /* NaverSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchViewModel.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 		9E7883462D38FADC00A3697D /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				9EA2D6062D549F5300FDF92B /* ViewModel */,
 				9E7883482D38FAFA00A3697D /* View */,
 				9E7883222D37828300A3697D /* NaverSearchViewController.swift */,
 			);
@@ -328,6 +331,7 @@
 		9E7883472D38FAE000A3697D /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				9EA2D6072D549F5900FDF92B /* ViewModel */,
 				9E7883492D38FB0100A3697D /* Cell */,
 				9E7883522D3905A800A3697D /* View */,
 				9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */,
@@ -365,6 +369,21 @@
 				9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */,
 			);
 			path = NaverNetwork;
+			sourceTree = "<group>";
+		};
+		9EA2D6062D549F5300FDF92B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA2D6082D549FAB00FDF92B /* NaverSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9EA2D6072D549F5900FDF92B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9EBB07242D34F3A6002C52D6 = {
@@ -800,6 +819,7 @@
 				9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */,
 				9EBB087D2D34F431002C52D6 /* AutoLayoutNaverViewController.swift in Sources */,
 				9EBB08E42D351EDF002C52D6 /* MovieTableViewCell.swift in Sources */,
+				9EA2D6092D549FAB00FDF92B /* NaverSearchViewModel.swift in Sources */,
 				9E7882FC2D36B80B00A3697D /* BaseViewController.swift in Sources */,
 				9EBB087E2D34F431002C52D6 /* AutoLayoutNetfilxViewController.swift in Sources */,
 				9EBB087F2D34F431002C52D6 /* NicknameSettingViewController.swift in Sources */,
