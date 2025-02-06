@@ -180,7 +180,7 @@ class NaverPayViewController: UIViewController {
             }
         }
         
-        naverpayLockImageView.setImageView(image: UIImage(resource: .naverpayLock), cornerRadius: 0)
+        naverpayLockImageView.setImageView(image: UIImage(resource: ._1), cornerRadius: 0)
         
         commentLabel.setLabelUI("한 번만 인증하고\n비밀번호 없이 결제하세요",
                                 font: .boldSystemFont(ofSize: 20),

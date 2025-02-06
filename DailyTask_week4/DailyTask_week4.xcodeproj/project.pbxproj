@@ -12,7 +12,6 @@
 		9E7883032D36CE8200A3697D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7883022D36CE8200A3697D /* Alamofire */; };
 		9E7883062D36CFDD00A3697D /* LotteryResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */; };
 		9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883082D36E3C400A3697D /* MovieResponseModel.swift */; };
-		9E78830B2D36F15600A3697D /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9E78830A2D36F15600A3697D /* Secret.xcconfig */; };
 		9E78830D2D36F20200A3697D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */; };
 		9E7883232D37828300A3697D /* NaverSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883222D37828300A3697D /* NaverSearchViewController.swift */; };
 		9E7883252D3782BE00A3697D /* NaverShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */; };
@@ -23,6 +22,10 @@
 		9E78834F2D38FBB600A3697D /* NaverSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78834E2D38FBB600A3697D /* NaverSearchView.swift */; };
 		9E7883542D3905C600A3697D /* NaverShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883532D3905C600A3697D /* NaverShoppingListView.swift */; };
 		9E7883572D391E4A00A3697D /* NaverNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */; };
+		9EA2D6032D549D8900FDF92B /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9EA2D6022D549D8900FDF92B /* Secret.xcconfig */; };
+		9EA2D6052D549F2400FDF92B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2D6042D549F2400FDF92B /* Observable.swift */; };
+		9EA2D6092D549FAB00FDF92B /* NaverSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2D6082D549FAB00FDF92B /* NaverSearchViewModel.swift */; };
+		9EA2D60B2D54A3DC00FDF92B /* NaverShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2D60A2D54A3DC00FDF92B /* NaverShoppingListViewModel.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -122,7 +125,6 @@
 		9E7882FF2D36B94B00A3697D /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 		9E7883052D36CFDD00A3697D /* LotteryResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryResponseModel.swift; sourceTree = "<group>"; };
 		9E7883082D36E3C400A3697D /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
-		9E78830A2D36F15600A3697D /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
 		9E78830C2D36F1F300A3697D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		9E7883222D37828300A3697D /* NaverSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchViewController.swift; sourceTree = "<group>"; };
 		9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingListViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,10 @@
 		9E78834E2D38FBB600A3697D /* NaverSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchView.swift; sourceTree = "<group>"; };
 		9E7883532D3905C600A3697D /* NaverShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingListView.swift; sourceTree = "<group>"; };
 		9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverNetworkManager.swift; sourceTree = "<group>"; };
+		9EA2D6022D549D8900FDF92B /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
+		9EA2D6042D549F2400FDF92B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		9EA2D6082D549FAB00FDF92B /* NaverSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverSearchViewModel.swift; sourceTree = "<group>"; };
+		9EA2D60A2D54A3DC00FDF92B /* NaverShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingListViewModel.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -317,6 +323,7 @@
 		9E7883462D38FADC00A3697D /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				9EA2D6062D549F5300FDF92B /* ViewModel */,
 				9E7883482D38FAFA00A3697D /* View */,
 				9E7883222D37828300A3697D /* NaverSearchViewController.swift */,
 			);
@@ -326,6 +333,7 @@
 		9E7883472D38FAE000A3697D /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				9EA2D6072D549F5900FDF92B /* ViewModel */,
 				9E7883492D38FB0100A3697D /* Cell */,
 				9E7883522D3905A800A3697D /* View */,
 				9E7883242D3782BE00A3697D /* NaverShoppingListViewController.swift */,
@@ -365,6 +373,22 @@
 			path = NaverNetwork;
 			sourceTree = "<group>";
 		};
+		9EA2D6062D549F5300FDF92B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA2D6082D549FAB00FDF92B /* NaverSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9EA2D6072D549F5900FDF92B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA2D60A2D54A3DC00FDF92B /* NaverShoppingListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9EBB07242D34F3A6002C52D6 = {
 			isa = PBXGroup;
 			children = (
@@ -387,7 +411,7 @@
 				9EBB080B2D34F431002C52D6 /* AppDelegate.swift */,
 				9EBB080C2D34F431002C52D6 /* Info.plist */,
 				9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */,
-				9E78830A2D36F15600A3697D /* Secret.xcconfig */,
+				9EA2D6022D549D8900FDF92B /* Secret.xcconfig */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -641,6 +665,7 @@
 			children = (
 				9EBB08732D34F431002C52D6 /* DateFormatter+.swift */,
 				9EBB08742D34F431002C52D6 /* UIAlert+.swift */,
+				9EA2D6042D549F2400FDF92B /* Observable.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -766,7 +791,6 @@
 				9EBB08BC2D34F431002C52D6 /* JustClap.storyboard in Resources */,
 				9EBB08BD2D34F431002C52D6 /* Restaurant.storyboard in Resources */,
 				9EBB08BE2D34F431002C52D6 /* GameCollectionViewCell.xib in Resources */,
-				9E78830B2D36F15600A3697D /* Secret.xcconfig in Resources */,
 				9EBB08BF2D34F431002C52D6 /* UpDownGame.storyboard in Resources */,
 				9EBB08C02D34F431002C52D6 /* DateLineTableViewCell.xib in Resources */,
 				9EBB08C12D34F431002C52D6 /* MyChatTableViewCell.xib in Resources */,
@@ -777,6 +801,7 @@
 				9EBB08C62D34F431002C52D6 /* BMICalculator.storyboard in Resources */,
 				9EBB08D52D34FDF6002C52D6 /* DailyTask250113.storyboard in Resources */,
 				9EBB08C72D34F431002C52D6 /* EmotionDiary.storyboard in Resources */,
+				9EA2D6032D549D8900FDF92B /* Secret.xcconfig in Resources */,
 				9EBB08C82D34F431002C52D6 /* Main.storyboard in Resources */,
 				9EBB08C92D34F431002C52D6 /* NeologismFinder.storyboard in Resources */,
 				9EBB08CA2D34F431002C52D6 /* DailyTask 2nd.storyboard in Resources */,
@@ -797,6 +822,7 @@
 				9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */,
 				9EBB087D2D34F431002C52D6 /* AutoLayoutNaverViewController.swift in Sources */,
 				9EBB08E42D351EDF002C52D6 /* MovieTableViewCell.swift in Sources */,
+				9EA2D6092D549FAB00FDF92B /* NaverSearchViewModel.swift in Sources */,
 				9E7882FC2D36B80B00A3697D /* BaseViewController.swift in Sources */,
 				9EBB087E2D34F431002C52D6 /* AutoLayoutNetfilxViewController.swift in Sources */,
 				9EBB087F2D34F431002C52D6 /* NicknameSettingViewController.swift in Sources */,
@@ -843,6 +869,7 @@
 				9EBB089B2D34F431002C52D6 /* UpDownGameViewController.swift in Sources */,
 				9E7883002D36B94B00A3697D /* LotteryViewController.swift in Sources */,
 				9EBB089C2D34F431002C52D6 /* ChatViewController.swift in Sources */,
+				9EA2D60B2D54A3DC00FDF92B /* NaverShoppingListViewModel.swift in Sources */,
 				9EBB089D2D34F431002C52D6 /* DateLineTableViewCell.swift in Sources */,
 				9EBB089E2D34F431002C52D6 /* MyChatTableViewCell.swift in Sources */,
 				9EBB089F2D34F431002C52D6 /* OtherChatTableViewCell.swift in Sources */,
@@ -858,6 +885,7 @@
 				9EBB08A82D34F431002C52D6 /* UIView+Extension.swift in Sources */,
 				9EBB08A92D34F431002C52D6 /* BMICalculatorViewController.swift in Sources */,
 				9EBB08E02D351D55002C52D6 /* MovieListViewController.swift in Sources */,
+				9EA2D6052D549F2400FDF92B /* Observable.swift in Sources */,
 				9EBB08AA2D34F431002C52D6 /* EmotionDiaryViewController.swift in Sources */,
 				9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */,
 				9EBB08AB2D34F431002C52D6 /* MainHomeTabViewController.swift in Sources */,
@@ -895,7 +923,7 @@
 /* Begin XCBuildConfiguration section */
 		9EBB07412D34F3A8002C52D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E78830A2D36F15600A3697D /* Secret.xcconfig */;
+			baseConfigurationReference = 9EA2D6022D549D8900FDF92B /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -907,8 +935,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -916,15 +944,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.psy.DailyTask-week4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9EBB07422D34F3A8002C52D6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E78830A2D36F15600A3697D /* Secret.xcconfig */;
+			baseConfigurationReference = 9EA2D6022D549D8900FDF92B /* Secret.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -936,8 +968,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -945,9 +977,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.psy.DailyTask-week4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
