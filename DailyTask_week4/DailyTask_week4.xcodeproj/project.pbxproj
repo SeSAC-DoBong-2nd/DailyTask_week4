@@ -23,6 +23,7 @@
 		9E7883542D3905C600A3697D /* NaverShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883532D3905C600A3697D /* NaverShoppingListView.swift */; };
 		9E7883572D391E4A00A3697D /* NaverNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */; };
 		9EA2D6032D549D8900FDF92B /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9EA2D6022D549D8900FDF92B /* Secret.xcconfig */; };
+		9EA2D6052D549F2400FDF92B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2D6042D549F2400FDF92B /* Observable.swift */; };
 		9EBB087A2D34F431002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080B2D34F431002C52D6 /* AppDelegate.swift */; };
 		9EBB087B2D34F431002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB080D2D34F431002C52D6 /* SceneDelegate.swift */; };
 		9EBB087C2D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB08102D34F431002C52D6 /* AutoLayoutKakaotalkViewController.swift */; };
@@ -133,6 +134,7 @@
 		9E7883532D3905C600A3697D /* NaverShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverShoppingListView.swift; sourceTree = "<group>"; };
 		9E7883562D391E4A00A3697D /* NaverNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverNetworkManager.swift; sourceTree = "<group>"; };
 		9EA2D6022D549D8900FDF92B /* Secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
+		9EA2D6042D549F2400FDF92B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		9EBB072D2D34F3A6002C52D6 /* DailyTask_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTask_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB080B2D34F431002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB080C2D34F431002C52D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 			children = (
 				9EBB08732D34F431002C52D6 /* DateFormatter+.swift */,
 				9EBB08742D34F431002C52D6 /* UIAlert+.swift */,
+				9EA2D6042D549F2400FDF92B /* Observable.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				9EBB08A82D34F431002C52D6 /* UIView+Extension.swift in Sources */,
 				9EBB08A92D34F431002C52D6 /* BMICalculatorViewController.swift in Sources */,
 				9EBB08E02D351D55002C52D6 /* MovieListViewController.swift in Sources */,
+				9EA2D6052D549F2400FDF92B /* Observable.swift in Sources */,
 				9EBB08AA2D34F431002C52D6 /* EmotionDiaryViewController.swift in Sources */,
 				9E7883092D36E3D200A3697D /* MovieResponseModel.swift in Sources */,
 				9EBB08AB2D34F431002C52D6 /* MainHomeTabViewController.swift in Sources */,
